@@ -1,0 +1,14 @@
+C:\Users\Eytan\source\repos\Class-9\Class-9\bin\Debug\net8.0\Class-9.exe
+C:\Users\Eytan\source\repos\Class-9\Class-9\bin\Debug\net8.0\Class-9.deps.json
+C:\Users\Eytan\source\repos\Class-9\Class-9\bin\Debug\net8.0\Class-9.runtimeconfig.json
+C:\Users\Eytan\source\repos\Class-9\Class-9\bin\Debug\net8.0\Class-9.dll
+C:\Users\Eytan\source\repos\Class-9\Class-9\bin\Debug\net8.0\Class-9.pdb
+C:\Users\Eytan\source\repos\Class-9\Class-9\obj\Debug\net8.0\Class-9.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eytan\source\repos\Class-9\Class-9\obj\Debug\net8.0\Class-9.AssemblyInfoInputs.cache
+C:\Users\Eytan\source\repos\Class-9\Class-9\obj\Debug\net8.0\Class-9.AssemblyInfo.cs
+C:\Users\Eytan\source\repos\Class-9\Class-9\obj\Debug\net8.0\Class-9.csproj.CoreCompileInputs.cache
+C:\Users\Eytan\source\repos\Class-9\Class-9\obj\Debug\net8.0\Class-9.dll
+C:\Users\Eytan\source\repos\Class-9\Class-9\obj\Debug\net8.0\refint\Class-9.dll
+C:\Users\Eytan\source\repos\Class-9\Class-9\obj\Debug\net8.0\Class-9.pdb
+C:\Users\Eytan\source\repos\Class-9\Class-9\obj\Debug\net8.0\Class-9.genruntimeconfig.cache
+C:\Users\Eytan\source\repos\Class-9\Class-9\obj\Debug\net8.0\ref\Class-9.dll

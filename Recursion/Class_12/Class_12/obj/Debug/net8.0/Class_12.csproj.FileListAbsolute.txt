@@ -1,0 +1,14 @@
+C:\Users\Eytan\source\repos\Class_12\Class_12\bin\Debug\net8.0\Class_12.exe
+C:\Users\Eytan\source\repos\Class_12\Class_12\bin\Debug\net8.0\Class_12.deps.json
+C:\Users\Eytan\source\repos\Class_12\Class_12\bin\Debug\net8.0\Class_12.runtimeconfig.json
+C:\Users\Eytan\source\repos\Class_12\Class_12\bin\Debug\net8.0\Class_12.dll
+C:\Users\Eytan\source\repos\Class_12\Class_12\bin\Debug\net8.0\Class_12.pdb
+C:\Users\Eytan\source\repos\Class_12\Class_12\obj\Debug\net8.0\Class_12.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eytan\source\repos\Class_12\Class_12\obj\Debug\net8.0\Class_12.AssemblyInfoInputs.cache
+C:\Users\Eytan\source\repos\Class_12\Class_12\obj\Debug\net8.0\Class_12.AssemblyInfo.cs
+C:\Users\Eytan\source\repos\Class_12\Class_12\obj\Debug\net8.0\Class_12.csproj.CoreCompileInputs.cache
+C:\Users\Eytan\source\repos\Class_12\Class_12\obj\Debug\net8.0\Class_12.dll
+C:\Users\Eytan\source\repos\Class_12\Class_12\obj\Debug\net8.0\refint\Class_12.dll
+C:\Users\Eytan\source\repos\Class_12\Class_12\obj\Debug\net8.0\Class_12.pdb
+C:\Users\Eytan\source\repos\Class_12\Class_12\obj\Debug\net8.0\Class_12.genruntimeconfig.cache
+C:\Users\Eytan\source\repos\Class_12\Class_12\obj\Debug\net8.0\ref\Class_12.dll
