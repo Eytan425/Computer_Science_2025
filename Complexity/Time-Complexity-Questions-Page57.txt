@@ -1,0 +1,14 @@
+Time Complexity Questions:
+
+1) 
+	Function: f(n) = 30n + 50n^3 + 5
+	Time Complexity: O(n^3)
+2)
+	Function: f(n) = log(n,2) + n
+	Time Complexity: O(n)
+3)
+	Function: f(n) = n*sqrt(n) + 2*sqrt(n)
+	Time Complexity: O(n*sqrt(n))
+4)
+	Function: f(n) = [(n^2) + (n^4)]/1000
+	Time Complexity: O(n^4)
