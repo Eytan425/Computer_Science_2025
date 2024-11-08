@@ -1,0 +1,23 @@
+﻿Linked Lists C#
+
+
+A linked list is a dynamic data structure that consists of a sequence of nodes. Each node contains two parts:
+1. Data: The value stored in the node.
+2. Link: A reference to the next node in the list.
+For every code we will write, we will have the node class in another file and use it.
+How the Node Class looks (without any functions):
+        class Node <T>
+        {
+                private T value;
+                private Node<T> next;
+                public Node<T>(T value)
+                {
+                        this.value = value;
+                        This.next = null;
+                }
+        }
+To start using linked lists in your code, you will need to add a line at the beginning of the project
+The line is:
+        using System.Collections.Generic;
+How to create a linked list:
+        LinkedList<{type}> {any parameter name} = new LinkedList<{type}>();
