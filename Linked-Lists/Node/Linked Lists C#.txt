@@ -19,5 +19,6 @@ How the Node Class looks (without any functions):
 To start using linked lists in your code, you will need to add a line at the beginning of the project
 The line is:
         using System.Collections.Generic;
-How to create a linked list:
-        LinkedList<{type}> {any parameter name} = new LinkedList<{type}>();
+How to create a linked list using Node (I am creating the node class):
+        Node<{type}> {any parameter name} = new Node<{type}>({value});
+        

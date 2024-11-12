@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eytan\\Documents\\Github\\Computer_Science_2025\\Complexity\\Class_15\\Class_15.csproj",
-      "projectName": "Class_15",
-      "projectPath": "C:\\Users\\Eytan\\Documents\\Github\\Computer_Science_2025\\Complexity\\Class_15\\Class_15.csproj",
+      "projectUniqueName": "C:\\Users\\Eytan\\Documents\\Github\\Computer_Science_2025\\Linked-Lists\\Node\\Node.csproj",
+      "projectName": "Node",
+      "projectPath": "C:\\Users\\Eytan\\Documents\\Github\\Computer_Science_2025\\Linked-Lists\\Node\\Node.csproj",
       "packagesPath": "C:\\Users\\Eytan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eytan\\Documents\\Github\\Computer_Science_2025\\Complexity\\Class_15\\obj\\",
+      "outputPath": "C:\\Users\\Eytan\\Documents\\Github\\Computer_Science_2025\\Linked-Lists\\Node\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
