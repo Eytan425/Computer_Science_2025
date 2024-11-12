@@ -32,18 +32,7 @@ class Node<T>
         Console.WriteLine("Enter any number, -999 to end: ");
         return int.Parse(Console.ReadLine());
     }
-    private Node<int> CreateList()
-    {
-        int num = GetNum();
-        Node<int> first = new Node<int>(num), pos = first;
-        num = GetNum();
-        while(num!=-999)
-        {
-            pos.SetNext(new Node<int>(num));
-            pos = pos.GetNext();
-            num = GetNum();
-        }
-        return first;
-    }
+    
+    
     
 }
