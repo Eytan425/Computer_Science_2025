@@ -22,3 +22,5 @@ The line is:
 How to create a linked list using Node (I am creating the node class):
         Node<{type}> {any parameter name} = new Node<{type}>({value});
         
+
+https://www.facebook.com/marketplace/item/1045904590119474/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A9c070d38-b95c-435b-a3e9-ae3566444858

@@ -1,9 +1,10 @@
 ﻿using System;
-
+using Node;
 class Program
 {
     public static void Main()
     {
-        Console.WriteLine("Hello, World!");
+        Node<int> first = CreateList();
+        ShowList(first);
     }
 }
