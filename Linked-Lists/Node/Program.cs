@@ -94,8 +94,10 @@ class Program
         }
         return maxPos;
     }
-    public static ()
+    public static void removeNode(Node<int> first, Node<int> nd)
     {
+
+        
         
     }
     public static void Main()
