@@ -1,0 +1,15 @@
+c:\Users\Eytan\Documents\Github\Computer_Science_2025\Studying\Recursion\bin\Debug\net8.0\Recursion.exe
+c:\Users\Eytan\Documents\Github\Computer_Science_2025\Studying\Recursion\bin\Debug\net8.0\Recursion.deps.json
+c:\Users\Eytan\Documents\Github\Computer_Science_2025\Studying\Recursion\bin\Debug\net8.0\Recursion.runtimeconfig.json
+c:\Users\Eytan\Documents\Github\Computer_Science_2025\Studying\Recursion\bin\Debug\net8.0\Recursion.dll
+c:\Users\Eytan\Documents\Github\Computer_Science_2025\Studying\Recursion\bin\Debug\net8.0\Recursion.pdb
+c:\Users\Eytan\Documents\Github\Computer_Science_2025\Studying\Recursion\obj\Debug\net8.0\Recursion.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Eytan\Documents\Github\Computer_Science_2025\Studying\Recursion\obj\Debug\net8.0\Recursion.AssemblyInfoInputs.cache
+c:\Users\Eytan\Documents\Github\Computer_Science_2025\Studying\Recursion\obj\Debug\net8.0\Recursion.AssemblyInfo.cs
+c:\Users\Eytan\Documents\Github\Computer_Science_2025\Studying\Recursion\obj\Debug\net8.0\Recursion.csproj.CoreCompileInputs.cache
+c:\Users\Eytan\Documents\Github\Computer_Science_2025\Studying\Recursion\obj\Debug\net8.0\Recursion.sourcelink.json
+c:\Users\Eytan\Documents\Github\Computer_Science_2025\Studying\Recursion\obj\Debug\net8.0\Recursion.dll
+c:\Users\Eytan\Documents\Github\Computer_Science_2025\Studying\Recursion\obj\Debug\net8.0\refint\Recursion.dll
+c:\Users\Eytan\Documents\Github\Computer_Science_2025\Studying\Recursion\obj\Debug\net8.0\Recursion.pdb
+c:\Users\Eytan\Documents\Github\Computer_Science_2025\Studying\Recursion\obj\Debug\net8.0\Recursion.genruntimeconfig.cache
+c:\Users\Eytan\Documents\Github\Computer_Science_2025\Studying\Recursion\obj\Debug\net8.0\ref\Recursion.dll

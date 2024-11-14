@@ -27,12 +27,9 @@ class Node<T>
     {
         this.next = next;
     }
-    public int GetNum()
-    {
-        Console.WriteLine("Enter any number, -999 to end: ");
-        return int.Parse(Console.ReadLine());
-    }
-    
-    
-    
+    // public int GetNum()
+    // {
+    //     Console.WriteLine("Enter any number, -999 to end: ");
+    //     return int.Parse(Console.ReadLine());
+    // }    
 }
