@@ -94,11 +94,18 @@ class Program
         }
         return maxPos;
     }
-    public static void removeNode(Node<int> first, Node<int> nd)
+    public static void RemoveNode(Node<int> first, Node<int> rn)
     {
+        Node<int> prevNode;
+        if(rnd == first)
+            return;
+        prevNode = first;
+        while(prevNode.GetNext() != rnd)
+        {
+            prevNode = prevNode.GetNext();
 
-        
-        
+        }
+        prevNode.SetNext(rnd.GetNext);
     }
     public static void Main()
     {
