@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Eytan\\Documents\\Github\\Computer_Science_2025\\Studying\\Recursion\\Recursion.csproj": {}
+    "c:\\Users\\Eytan\\Documents\\Github\\Computer_Science_2025\\Studying\\Recursion\\Recursion.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Eytan\\Documents\\Github\\Computer_Science_2025\\Studying\\Recursion\\Recursion.csproj": {
+    "c:\\Users\\Eytan\\Documents\\Github\\Computer_Science_2025\\Studying\\Recursion\\Recursion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eytan\\Documents\\Github\\Computer_Science_2025\\Studying\\Recursion\\Recursion.csproj",
+        "projectUniqueName": "c:\\Users\\Eytan\\Documents\\Github\\Computer_Science_2025\\Studying\\Recursion\\Recursion.csproj",
         "projectName": "Recursion",
-        "projectPath": "C:\\Users\\Eytan\\Documents\\Github\\Computer_Science_2025\\Studying\\Recursion\\Recursion.csproj",
+        "projectPath": "c:\\Users\\Eytan\\Documents\\Github\\Computer_Science_2025\\Studying\\Recursion\\Recursion.csproj",
         "packagesPath": "C:\\Users\\Eytan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eytan\\Documents\\Github\\Computer_Science_2025\\Studying\\Recursion\\obj\\",
+        "outputPath": "c:\\Users\\Eytan\\Documents\\Github\\Computer_Science_2025\\Studying\\Recursion\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
