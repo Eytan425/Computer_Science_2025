@@ -81,10 +81,28 @@ class Program
         return GetMaxR(first.GetNext(), max);
 
     }
+
+    public static Node<int> GetMaxPos(Node<int> first)
+    {
+        Node<int> pos = first;
+        Node<int> maxPos = first;
+        while(pos!= null)
+        {
+            if(maxPos.GetValue() < pos.GetValue())
+                maxPos = pos;
+            pos = pos.GetNext();
+        }
+        return maxPos;
+    }
+    public static ()
+    {
+        
+    }
     public static void Main()
     {
         Node<int> first = CreateList();
         int num = 10;
         Console.WriteLine(IsNumInListR(first,num));
     }
+
 }
