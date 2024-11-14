@@ -42,19 +42,7 @@ class Program
         return n%10+T05(n/10);
         
     }
-    public static void RemoveNode(Node<int> first, Node<int> rn)
-    {
-        Node<int> prevNode;
-        if(rnd == first)
-            return;
-        prevNode = first;
-        while(prevNode.GetNext() != rnd)
-        {
-            prevNode = prevNode.GetNext();
-
-        }
-        prevNode.SetNext(rnd.GetNext);
-    }
+    
     public static void Main()
     {
         Console.WriteLine(T04(1234));
