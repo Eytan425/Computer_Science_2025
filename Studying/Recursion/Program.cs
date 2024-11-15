@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Globalization;
 using System.Reflection.Metadata.Ecma335;
 
 class Program
@@ -82,6 +83,7 @@ class Program
         return T10(x,y-x);
         
     }
+    //Page 33
     public static bool T11(int num)
     {
         return T11(num,2);
@@ -99,9 +101,99 @@ class Program
 
         return T11(num, counter+1);    
     }
+    public static bool T12(int n)
+    {
+        if(n==0)
+            return true;
+        if((n%10)%2 == 0 && ((n/10)%10)%2 != 0 || (n%10)%2 != 0 && ((n/10)%10)%2 == 0)
+            return false;
+        return T12(n/10);    
+    }
+    public static bool T13(int num1, int num2)
+    {
+        if(num1 < 10 && num2 > 10|| num1 > 10 && num2< 10)
+            return false;
+        if(num1 < 10 && num2 < 10)
+            return true;    
+        return T13(num1/10, num2/10);
+    }
+    public static int T14(int n)
+    {
+        return T14(n, 1, 0);
+    }
+    public static int T14(int n, int counter, int sum)
+    {
+        if(n+1==counter)
+            return sum;
+        if(counter%2!=0)
+        {
+            sum += counter*2;
+        }
+        if(counter%2 == 0)
+        {
+            sum += (counter*counter);
+        }
+        return T14(n,counter+1, sum);
+    }
+    public static double T15(int n)
+    {
+        return T15(n,1,1,0);
+    }
+    public static double T15(int n, int numAt, int index ,double sum)
+    {
+        if(index > n)
+            return sum;
+        if(index%2==0)
+            sum += -1*Math.Sqrt(numAt);
+        if(index%2 != 0)
+            sum+=numAt;
+        return T15(n, numAt+2, index+1, sum);    
+    }
+    public static int T16(int n1, int n2)
+    {
+        return T16(n1,n2, 1,0);
+    }
+    public static int T16(int n1, int n2, int multiple, int sum)
+    {
+        if(multiple > n2)
+            return sum;
+        if(multiple%n1==0 && multiple < n2)
+            sum+=multiple;
+        return T16(n1,n2,multiple+1,sum);
+
+    }
+    // Calculate the nth Fibonacci number using a recursive helper function.
+    public static int T17A(int n) {
+        return T17A(0, 1, n, 1);
+    }
+
+    // Recursive helper function to calculate the next Fibonacci number.
+    public static int T17A(int previousNumber, int currentNumber, int targetIndex, int currentIndex) {
+        // Base case: If we've reached the target index, return the current Fibonacci number.
+        if (currentIndex == targetIndex) {
+            return previousNumber;
+        }
+
+        // Calculate the next Fibonacci number by adding the squares of the previous two numbers.
+        int nextNumber = previousNumber * previousNumber + currentNumber * currentNumber;
+
+        // Recursively call the helper function with the updated values.
+        return T17A(currentNumber, nextNumber, targetIndex, currentIndex + 1);
+    }
+    public static int T17B(int n) {
+        return T17B(0, 1, n, 0);
+    }
+
+    public static int T17B(int prev, int curr, int n, int sum) {
+    if (n == 0) {
+        return sum;
+    }
+    return T17B(curr, prev + curr, n - 1, sum + curr);
+}
     public static void Main()
     {
-        Console.WriteLine(T11(11));
-        // Console.WriteLine(T10(2,247));
+        // Console.WriteLine(T15(6));
+        Console.WriteLine(T16(12345,123));
+
     }
 }
