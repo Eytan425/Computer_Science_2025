@@ -8,7 +8,7 @@ class Program
         return T15(n, 1, 1);
     }
     //current => the number we are at (1,2,3.....). We need from 1 to n
-    //mone => The index of where we are. We need to add all the negative numbers from 1 to n
+    //mone => The index of where we are. We need to add all the odd numbers from 1 to n
     //If the index we are at is even, we square root the current and multiply by -1
     //If the index is odd, we just add the number itself
 

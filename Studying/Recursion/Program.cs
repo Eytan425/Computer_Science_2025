@@ -180,20 +180,88 @@ class Program
         // Recursively call the helper function with the updated values.
         return T17A(currentNumber, nextNumber, targetIndex, currentIndex + 1);
     }
-    public static int T17B(int n) {
-        return T17B(0, 1, n, 0);
+    // public static int T17B(int n)
+    // {
+    //     return T17B(0, 1, n, 0);
+    // }
+
+    // public static int T17B(int prev, int curr, int n, int sum)
+    // {
+    //     if (n == 0)
+    //     {
+    //         return sum;
+    //     }
+    //     return T17B(curr, prev + curr, n - 1, sum + curr);
+    // }
+    //Another way
+    public static int T17B(int n)
+    {
+        return T17B(n,0);
+    }
+    public static int T17B(int n, int sum)
+    {
+        if(n==0)
+            return sum;
+        sum += T17A(n);
+        return T17B(n-1, sum);
     }
 
-    public static int T17B(int prev, int curr, int n, int sum) {
-    if (n == 0) {
-        return sum;
+    public static int T18(int[] arr, int index)
+    {
+        if(index < 0)
+            return 0;
+        return arr[index] + T18(arr, index-1);
     }
-    return T17B(curr, prev + curr, n - 1, sum + curr);
-}
+    public static int T19(int[] arr, int index)
+    {
+        if(index > arr.Length)
+            return 0;
+        return arr[index] + T19(arr, ++index);
+    }
+    public static int T20(int[] arr, int index)
+    {
+        return T20(arr,index,0);
+    }
+    public static int T20(int[] arr, int index,int counter)
+    {
+        if(index < 0)
+            return counter;
+        if(arr[index] > 0)
+            counter++;
+        return T20(arr, index-1,counter);
+    }
+    public static bool T21(int[] arr)
+    {
+        return T21(arr,0);
+    }
+    public static bool T21(int[] arr, int index)
+    {
+        if(index > arr.Length)
+            return true;
+        if(arr[index] >= arr[index+1])
+            return false;
+        return T21(arr,index+1);
+    }
+    public static int T22(int[] arr, int num)
+    {
+        return T22(arr,num,0);
+    }
+    public static int T22(int[] arr, int num,int counter)
+    {
+        if(counter > arr.Length-1)
+            return -1;
+        if(arr[counter] == num)
+            return counter;
+        return T22(arr, num,counter+1);
+    }
+
+
     public static void Main()
     {
-        // Console.WriteLine(T15(6));
-        Console.WriteLine(T16(12345,123));
+        int[] arr = [1,2,-3,-4,7];
+        int num = 7;
+        Console.WriteLine(T22(arr,num));
+
 
     }
 }

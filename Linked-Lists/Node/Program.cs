@@ -81,7 +81,7 @@ class Program
         return GetMaxR(first.GetNext(), max);
 
     }
-
+    
     public static Node<int> GetMaxPos(Node<int> first)
     {
         Node<int> pos = first;
@@ -94,7 +94,7 @@ class Program
         }
         return maxPos;
     }
-    public static void RemoveNode(Node<int> first, Node<int> rn)
+    public static void RemoveNode(Node<int> first, Node<int> rnd)
     {
         Node<int> prevNode;
         if(rnd == first)
@@ -105,7 +105,7 @@ class Program
             prevNode = prevNode.GetNext();
 
         }
-        prevNode.SetNext(rnd.GetNext);
+        prevNode.SetNext(rnd.GetNext());
     }
     public static void Main()
     {
