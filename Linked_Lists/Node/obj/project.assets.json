@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Github\\Computer_Science_2025\\Queue\\Queue.csproj",
-      "projectName": "Queue",
-      "projectPath": "E:\\Github\\Computer_Science_2025\\Queue\\Queue.csproj",
+      "projectUniqueName": "E:\\Github\\Computer_Science_2025\\Linked_Lists\\Node\\Node.csproj",
+      "projectName": "Node",
+      "projectPath": "E:\\Github\\Computer_Science_2025\\Linked_Lists\\Node\\Node.csproj",
       "packagesPath": "C:\\Users\\Eytan\\.nuget\\packages\\",
-      "outputPath": "E:\\Github\\Computer_Science_2025\\Queue\\obj\\",
+      "outputPath": "E:\\Github\\Computer_Science_2025\\Linked_Lists\\Node\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

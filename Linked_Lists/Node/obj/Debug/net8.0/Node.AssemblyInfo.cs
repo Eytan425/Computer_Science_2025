@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Node")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b819547ea24b6c1d174af7ecac114576804ff043")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac681be89d73beeeec8b57d49f957e604cb278f5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Node")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Node")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

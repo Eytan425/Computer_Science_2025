@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Eytan\\Documents\\Github\\Computer_Science_2025\\Linked-Lists\\Node\\Node.csproj": {}
+    "E:\\Github\\Computer_Science_2025\\Linked_Lists\\Node\\Node.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Eytan\\Documents\\Github\\Computer_Science_2025\\Linked-Lists\\Node\\Node.csproj": {
+    "E:\\Github\\Computer_Science_2025\\Linked_Lists\\Node\\Node.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eytan\\Documents\\Github\\Computer_Science_2025\\Linked-Lists\\Node\\Node.csproj",
+        "projectUniqueName": "E:\\Github\\Computer_Science_2025\\Linked_Lists\\Node\\Node.csproj",
         "projectName": "Node",
-        "projectPath": "C:\\Users\\Eytan\\Documents\\Github\\Computer_Science_2025\\Linked-Lists\\Node\\Node.csproj",
+        "projectPath": "E:\\Github\\Computer_Science_2025\\Linked_Lists\\Node\\Node.csproj",
         "packagesPath": "C:\\Users\\Eytan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eytan\\Documents\\Github\\Computer_Science_2025\\Linked-Lists\\Node\\obj\\",
+        "outputPath": "E:\\Github\\Computer_Science_2025\\Linked_Lists\\Node\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
