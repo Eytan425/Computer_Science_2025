@@ -1,0 +1,15 @@
+e:\Github\Computer_Science_2025\Linked_Lists\Queue\bin\Debug\net8.0\Queue.exe
+e:\Github\Computer_Science_2025\Linked_Lists\Queue\bin\Debug\net8.0\Queue.deps.json
+e:\Github\Computer_Science_2025\Linked_Lists\Queue\bin\Debug\net8.0\Queue.runtimeconfig.json
+e:\Github\Computer_Science_2025\Linked_Lists\Queue\bin\Debug\net8.0\Queue.dll
+e:\Github\Computer_Science_2025\Linked_Lists\Queue\bin\Debug\net8.0\Queue.pdb
+e:\Github\Computer_Science_2025\Linked_Lists\Queue\obj\Debug\net8.0\Queue.GeneratedMSBuildEditorConfig.editorconfig
+e:\Github\Computer_Science_2025\Linked_Lists\Queue\obj\Debug\net8.0\Queue.AssemblyInfoInputs.cache
+e:\Github\Computer_Science_2025\Linked_Lists\Queue\obj\Debug\net8.0\Queue.AssemblyInfo.cs
+e:\Github\Computer_Science_2025\Linked_Lists\Queue\obj\Debug\net8.0\Queue.csproj.CoreCompileInputs.cache
+e:\Github\Computer_Science_2025\Linked_Lists\Queue\obj\Debug\net8.0\Queue.sourcelink.json
+e:\Github\Computer_Science_2025\Linked_Lists\Queue\obj\Debug\net8.0\Queue.dll
+e:\Github\Computer_Science_2025\Linked_Lists\Queue\obj\Debug\net8.0\refint\Queue.dll
+e:\Github\Computer_Science_2025\Linked_Lists\Queue\obj\Debug\net8.0\Queue.pdb
+e:\Github\Computer_Science_2025\Linked_Lists\Queue\obj\Debug\net8.0\Queue.genruntimeconfig.cache
+e:\Github\Computer_Science_2025\Linked_Lists\Queue\obj\Debug\net8.0\ref\Queue.dll
