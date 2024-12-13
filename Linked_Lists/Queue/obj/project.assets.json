@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/eytan/Computer_Science_2025/Linked_Lists/Queue/Queue.csproj",
+      "projectUniqueName": "/home/eytan/Codes/Computer_Science_2025/Linked_Lists/Queue/Queue.csproj",
       "projectName": "Queue",
-      "projectPath": "/home/eytan/Computer_Science_2025/Linked_Lists/Queue/Queue.csproj",
+      "projectPath": "/home/eytan/Codes/Computer_Science_2025/Linked_Lists/Queue/Queue.csproj",
       "packagesPath": "/home/eytan/.nuget/packages/",
-      "outputPath": "/home/eytan/Computer_Science_2025/Linked_Lists/Queue/obj/",
+      "outputPath": "/home/eytan/Codes/Computer_Science_2025/Linked_Lists/Queue/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/eytan/.nuget/NuGet/NuGet.Config"
