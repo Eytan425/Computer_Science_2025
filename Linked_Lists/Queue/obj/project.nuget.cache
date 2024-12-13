@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "mOOGDj53QXI=",
+  "dgSpecHash": "K5YyrLaylHQ=",
   "success": true,
-  "projectFilePath": "E:\\Github\\Computer_Science_2025\\Linked_Lists\\Queue\\Queue.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/eytan/Computer_Science_2025/Linked_Lists/Queue/Queue.csproj",
+  "expectedPackageFiles": [
+    "/home/eytan/.nuget/packages/microsoft.netcore.app.ref/8.0.11/microsoft.netcore.app.ref.8.0.11.nupkg.sha512",
+    "/home/eytan/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.11/microsoft.aspnetcore.app.ref.8.0.11.nupkg.sha512",
+    "/home/eytan/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.11/microsoft.netcore.app.host.linux-x64.8.0.11.nupkg.sha512"
+  ],
   "logs": []
 }
