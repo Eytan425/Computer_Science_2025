@@ -86,7 +86,7 @@ class Program
         }
     }
     //Checks if a number is in the queue
-    public static bool IsNumberInQueue(Queue<int> queue, int num)
+    public static bool IsNumberInQueueDummy(Queue<int> queue, int num)
     {
         int dummy = -1;
         int x;
@@ -102,6 +102,18 @@ class Program
         }
         return found;
     }
+    public static bool IsNumberInQueue(Queue<int> queue, int num)
+    {
+        Queue<int> newQueue = CloneQueue(queue);
+        bool found = false;
+        while(newQueue.IsEmpty() == false)
+        {
+            if(newQueue.Remove() == num)
+                found = true;
+        }
+        return found;
+    }
+    
 
     public static void Main()
     {
@@ -109,5 +121,7 @@ class Program
         ShowQueueDummy(queue);
         Console.WriteLine(" ");
         Console.WriteLine($"The greatest number is the queue is  {GetMax(queue)}");
+        int num = 1;
+        Console.WriteLine(IsNumberInQueue(queue, num));
     }
 }
