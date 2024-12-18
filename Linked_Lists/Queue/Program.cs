@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Runtime.CompilerServices;
 
 class Program
@@ -113,7 +114,18 @@ class Program
         }
         return found;
     }
-    
+    //A method that gets a list of queues (integer) and prints the max value of every queue in the list
+    public static void PrintMax(Node<Queue<int>> first)
+    {
+        Queue<int> queue;
+        Node<Queue<int>> pos = first;
+        while(pos!=null)
+        {
+            queue = pos.GetValue();
+            Console.WriteLine("{0} ", GetMax(queue));
+            pos.GetNext();
+        }
+    }
 
     public static void Main()
     {
