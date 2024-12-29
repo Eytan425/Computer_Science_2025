@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Globalization;
 using System.Reflection.Metadata.Ecma335;
+using System.Security.Cryptography.X509Certificates;
 
 class Program
 {
@@ -315,16 +316,60 @@ class Program
         return T26(arr1,arr2,index+1);
 
     }
+    public static int T27(int[,] arr, int num)
+    {
+        return T27(arr,num,0,0,0);
+    }
+    public static int T27(int[,] arr, int num,int indexX, int indexY, int counter)
+    {
+        if(indexX > arr.GetLength(0)-1 || indexY > arr.GetLength(1)-1)
+            return counter;
+        if(arr[indexX,indexY] == num)
+            counter++;
+        return T27(arr,num,indexX+1,indexY+1,counter);
+                
+    }
+    public static bool T28(int[,] mat, int num)
+    {
+        return T28(mat,num,0,0);
+    }
+    public static bool T28(int[,] mat, int num, int indexX, int indexY)
+    {
+        if(indexX > mat.GetLength(0) - 1 || indexY > mat.GetLength(1) - 1)
+            return true;
+        if(mat[indexX, indexY] < num)
+            return false;
+        return T28(mat, num, indexX + 1, indexY); 
+    }
+    public static bool T29(int[,] arr)
+    {
+        return T29(arr,0,arr.GetLength(0) - 1,0);
+    }
+    public static bool T29(int[,] arr, int index, int indexX, int indexY)
+    {
+        if(arr.GetLength(0) != arr.GetLength(1))
+            return false;
+        if(indexX > arr.GetLength(0)-1 || indexY > arr.GetLength(1)-1|| index > arr.GetLength(1)-1 )
+            return true;
+        if(arr[index, index] != 1 || arr[indexX, indexY] != 1)
+            return false;
+
+    }
+
 
 
     public static void Main()
-    {
-        int[] arr1 = {11,9,6,5};
-        int[] arr2 = {11,9,6,4};
-        char[] array = {'d','a','b','a','d'};
-        Console.WriteLine(T26(arr1,arr2));
+{
+    int[] arr1 = {11,9,6,5};
+    int[] arr2 = {11,9,6,4};
+    char[] array = {'d','a','b','a','d'};
+    int[,] arr2D = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
 
-
-
-    }
+    // Console.WriteLine(T26(arr1, arr2));
+    Console.WriteLine(T28(arr2D, 0));
+}
 }
