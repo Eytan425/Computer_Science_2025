@@ -1,0 +1,15 @@
+/home/eytan/Codes/Computer_Science_2025/Studying/Recursion/bin/Debug/net9.0/Recursion
+/home/eytan/Codes/Computer_Science_2025/Studying/Recursion/bin/Debug/net9.0/Recursion.deps.json
+/home/eytan/Codes/Computer_Science_2025/Studying/Recursion/bin/Debug/net9.0/Recursion.runtimeconfig.json
+/home/eytan/Codes/Computer_Science_2025/Studying/Recursion/bin/Debug/net9.0/Recursion.dll
+/home/eytan/Codes/Computer_Science_2025/Studying/Recursion/bin/Debug/net9.0/Recursion.pdb
+/home/eytan/Codes/Computer_Science_2025/Studying/Recursion/obj/Debug/net9.0/Recursion.GeneratedMSBuildEditorConfig.editorconfig
+/home/eytan/Codes/Computer_Science_2025/Studying/Recursion/obj/Debug/net9.0/Recursion.AssemblyInfoInputs.cache
+/home/eytan/Codes/Computer_Science_2025/Studying/Recursion/obj/Debug/net9.0/Recursion.AssemblyInfo.cs
+/home/eytan/Codes/Computer_Science_2025/Studying/Recursion/obj/Debug/net9.0/Recursion.csproj.CoreCompileInputs.cache
+/home/eytan/Codes/Computer_Science_2025/Studying/Recursion/obj/Debug/net9.0/Recursion.sourcelink.json
+/home/eytan/Codes/Computer_Science_2025/Studying/Recursion/obj/Debug/net9.0/Recursion.dll
+/home/eytan/Codes/Computer_Science_2025/Studying/Recursion/obj/Debug/net9.0/refint/Recursion.dll
+/home/eytan/Codes/Computer_Science_2025/Studying/Recursion/obj/Debug/net9.0/Recursion.pdb
+/home/eytan/Codes/Computer_Science_2025/Studying/Recursion/obj/Debug/net9.0/Recursion.genruntimeconfig.cache
+/home/eytan/Codes/Computer_Science_2025/Studying/Recursion/obj/Debug/net9.0/ref/Recursion.dll

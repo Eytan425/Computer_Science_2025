@@ -254,13 +254,76 @@ class Program
             return counter;
         return T22(arr, num,counter+1);
     }
+    public static bool T23(char[] arr)
+    {
+        Random rnd = new Random();
+        int num1 = rnd.Next(0,arr.Length);
+        int num2 = rnd.Next(0,arr.Length);
+        return T23(arr, num1, num2);
+    }
+    public static bool T23(char[] arr, int index1, int index2)
+    {
+        if(arr[index1] != arr[index2])
+        {
+            return false;
+        }
+        if(arr[index1] == arr[index2] && index1 != index2)
+        {
+            return true;
+        }
+        if(index1 < index2)
+            return T23(arr, index1 + 1, index2- 1);
+        return T23(arr, index1 - 1, index2 + 1);
+    }
+    public static bool T24(char[] arr)
+    {
+        return  T24(arr, 0,arr.Length-1);
+    }
+    public static bool T24(char[] arr, int firstIndex, int lastIndex)
+    {
+        if(arr[firstIndex] != arr[lastIndex])
+            return false;
+        if(arr[firstIndex] == arr[lastIndex])
+            return true;
+        return T24(arr, firstIndex+1, lastIndex-1);
+    }
+    public static bool T25(int[] arr)
+    {
+        return T25(arr,0);
+    }
+    public static bool T25(int[] arr, int index)
+    {
+        if(index == arr.Length)
+            return false;
+        if(T11(arr[index]) == true)
+            return true;    
+        return T25(arr, index+1);
+    }
+    public static bool T26(int[] arr1, int[] arr2)
+    {
+        return T26(arr1,arr2,0);
+    }
+    public static bool T26(int[] arr1, int[] arr2, int index)
+    {
+        if(index > arr1.Length-1)
+            return true;
+        if(arr1.Length!=arr2.Length)
+            return false;
+        if(arr1[index] != arr2[index])
+            return false;
+
+        return T26(arr1,arr2,index+1);
+
+    }
 
 
     public static void Main()
     {
-        int[] arr = [1,2,-3,-4,7];
-        int num = 7;
-        Console.WriteLine(T22(arr,num));
+        int[] arr1 = {11,9,6,5};
+        int[] arr2 = {11,9,6,4};
+        char[] array = {'d','a','b','a','d'};
+        Console.WriteLine(T26(arr1,arr2));
+
 
 
     }
