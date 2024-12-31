@@ -516,8 +516,7 @@ class Program
     }
     public static void T40(int a1, int difference, int amount)
     {
-        Console.WriteLine($"{a1} ");
-        T40(a1, difference, amount, 1);
+        T40(a1, difference, amount, 0);
     }
     public static void T40(int a1, int difference, int amount, int counter)
     {
@@ -525,7 +524,20 @@ class Program
             return;
         int nextNum = a1 + (difference * counter);
         Console.WriteLine($"{nextNum} ");
-        T40(nextNum, difference, amount, counter + 1);
+        T40(a1, difference, amount, counter + 1);
+    }
+    public static void T41(int n)
+    {
+        T41(n,0,1,0);
+    }
+    public static void T41(int n, int difference, int a1, int counter)
+    {
+        if(counter == n)
+            return;
+        int nextNum = a1 + difference;
+        Console.WriteLine($"{nextNum} ");
+        T41(n, difference+1, nextNum, counter + 1);
+
     }
 
     public static void Main()
@@ -548,6 +560,7 @@ class Program
         int difference = 3;
         int amount = 5;
         int a1 = 2;
-        T40(a1, difference, amount);
+       // T40(a1, difference, amount);
+        T41(6);
     }
 }
