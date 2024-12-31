@@ -1,6 +1,9 @@
 ﻿using System;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Globalization;
+using System.Net;
+using System.Net.NetworkInformation;
 using System.Reflection.Metadata.Ecma335;
 using System.Security.Cryptography.X509Certificates;
 
@@ -343,33 +346,208 @@ class Program
     }
     public static bool T29(int[,] arr)
     {
-        return T29(arr,0,arr.GetLength(0) - 1,0);
+        return T29(arr,0,arr.GetLength(0) - 1,0, 0);
     }
-    public static bool T29(int[,] arr, int index, int indexX, int indexY)
+    public static bool T29(int[,] arr, int index, int indexX, int indexY, int counter)
     {
+        int amount;
         if(arr.GetLength(0) != arr.GetLength(1))
             return false;
+        if(arr.GetLength(0) % 2 == 0)
+            amount  = (2 * arr.GetLength(0)) - ((2 * arr.GetLength(0)));
+        else
+            amount = (2 * arr.GetLength(0)) - ((2 * arr.GetLength(0)) - 1);
+        
         if(indexX > arr.GetLength(0)-1 || indexY > arr.GetLength(1)-1|| index > arr.GetLength(1)-1 )
             return true;
         if(arr[index, index] != 1 || arr[indexX, indexY] != 1)
             return false;
+        if(arr[indexX, indexY] == 0)
+            counter++;
+        if(counter == amount)
+            return true;
+
+        return  T29(arr, index+1, indexX-1, indexY+1, counter);
+    }
+    //Row is x and Column is y
+    public static int T30(int[,] arr, int index, int num)
+    {
+        return T30(arr,index,num, 0, 0, 0,0);
+    }
+    public static int T30(int[,] arr, int index, int num, int indexX, int indexY, int row, int counter)
+    {
+        if(indexX > arr.GetLength(0)-1 || indexY > arr.GetLength(1)-1)
+            return counter;
+        if(arr[indexX, indexY] == num && indexX != row && indexX != 0)
+            counter++;
+            row = indexX;
+        if(arr[indexX, indexY] == num && row == 0 && indexX == 0)
+            counter++;
+            row = indexX;
+        return T30(arr, index, num, indexX+1, indexY+1, row, counter);
+    }
+    public static int T31(string text)
+    {
+        return T31(text, 0, 0);
+    }
+    public static int T31(string text, int index, int count)
+    {
+        if(index > text.Length-1)
+            return count;
+        if(text[index] >= 'a' && text[index] <= 'z')
+            count++;
+        return T31(text, index+1, count);
+    }
+    public static bool T32(string text)
+    {
+        return T32(text, 0,0,0);
+    }
+    public static bool T32(string text, int index, int countLower, int countUpper)
+    {
+        if(index > text.Length-1)
+        {
+            if(countLower == text.Length)
+                return true;
+            else if(countUpper == text.Length)
+                return true;
+            else
+            {
+                return false;
+            }
+        }
+        
+        if(text[index] >= 'a' && text[index] <= 'z')
+            countLower++;
+        else if (text[index] >= 'A' && text[index] <= 'Z')
+            countUpper++;
+        return T32(text, index+1, countLower, countUpper); 
+    }
+    public static string T33(string text)
+    {
+        return T33(text, 0, " ");
+    }
+    public static string T33(string text, int index, string newText)
+    {
+        char addedChar = '*';
+        if(index > text.Length-1)
+            return newText;
+        newText += text[index];
+        if((index + 1) % 3 == 0)
+            newText += addedChar;
+            
+        return T33(text, index+1, newText);
+    }
+    public static string T34(string text)
+    {
+        return T34(text, text.Length-1, " ");
+    }
+    public static string T34(string text, int index, string reversedText)
+    {
+        if(index < 0)
+            return reversedText;
+        reversedText += text[index];
+        return T34(text, index-1, reversedText);
+    }
+    public static void T35(char letter1, char letter2)
+    {
+        if(letter1 == letter2) // Letter2 is also printed to the console
+            return ;
+        letter1 = (char)(letter1 + 1);
+        Console.WriteLine(letter1);
+        T35(letter1, letter2);
+    }
+    public static void T36(int n)
+    {
+        T36(n, 1);
+    }
+    
+    public static void T36(int n, int counter)
+    {
+        if(counter > n)
+            return;
+        if(n% counter == 0)
+            Console.WriteLine(counter);
+        T36(n, counter+1);
+    }
+    public static void T37(int n)
+    {
+        if(n == 0)
+            return;
+        if((n%10)%2 == 0)
+            Console.WriteLine(n%10);
+        T37(n/10);
 
     }
+    public static int ReverseNumber(int num)
+    {
+        return ReverseNumber(num, 0);
+    }
+    public static int ReverseNumber(int num, int reversedNum)
+    {
+        if(num == 0)
+            return reversedNum;
+        reversedNum = reversedNum * 10 + num % 10;
+        return ReverseNumber(num / 10, reversedNum);
+    }
 
-
+    public static void T38(int num)
+    {
+        int num1 = ReverseNumber(num);
+        T38(num, num1);
+    }
+    public static void T38(int num, int num1)
+    {
+        if(num1 == 0)
+            return;
+        Console.WriteLine(num1%10);
+        T38(num,num1/10);
+    }
+    public static void T39(int num1, int num2)
+    {
+        if (num1 > 10)
+            return;
+        if (num2 > 10)
+        {
+            T39(num1 + 1, 1);
+            return;
+        }
+        Console.WriteLine($"{num1} * {num2} = {num1 * num2}");
+        T39(num1, num2 + 1);
+    }
+    public static void T40(int a1, int difference, int amount)
+    {
+        Console.WriteLine($"{a1} ");
+        T40(a1, difference, amount, 1);
+    }
+    public static void T40(int a1, int difference, int amount, int counter)
+    {
+        if(counter == amount)
+            return;
+        int nextNum = a1 + (difference * counter);
+        Console.WriteLine($"{nextNum} ");
+        T40(nextNum, difference, amount, counter + 1);
+    }
 
     public static void Main()
-{
-    int[] arr1 = {11,9,6,5};
-    int[] arr2 = {11,9,6,4};
-    char[] array = {'d','a','b','a','d'};
-    int[,] arr2D = {
-        {1, 2, 3},
-        {4, 5, 6},
-        {7, 8, 9}
-    };
-
-    // Console.WriteLine(T26(arr1, arr2));
-    Console.WriteLine(T28(arr2D, 0));
-}
+    {
+        int[] arr1 = {11,9,6,5};
+        int[] arr2 = {11,9,6,4};
+        char[] array = {'d','a','b','a','d'};
+        int[,] arr2D = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+        int[,] matrix = {
+                { 1, 0, 0, 1, 1 },
+                { 0, 1, 0, 1, 0 },
+                { 0, 1, 1, 0, 0 },
+                { 0, 1, 0, 1, 0  }
+                
+        };
+        int difference = 3;
+        int amount = 5;
+        int a1 = 2;
+        T40(a1, difference, amount);
+    }
 }
