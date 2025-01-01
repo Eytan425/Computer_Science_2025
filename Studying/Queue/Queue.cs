@@ -35,4 +35,22 @@ class Queue<T>
     {
         return first.GetValue();
     }
+    //My function
+    public override string ToString()
+    {
+        if(this.IsEmpty()) return "[]";
+        Queue<T> temp = new Queue<T>();
+        while(!this.IsEmpty())
+        {
+            temp.Insert(this.Remove());
+        }
+        string s = "[";
+        while(!temp.IsEmpty())
+        {
+            s = s +temp.Head() + ',';
+            this.Insert(temp.Remove());
+        }
+        s = s.Substring(0, s.Length-1) + "]";
+        return s;
+    }
 }

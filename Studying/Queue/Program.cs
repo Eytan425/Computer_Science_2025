@@ -2,6 +2,10 @@
 using System.Collections;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
+using System;
+using System;
+using System.Collections.Generic;
+
 
 class Program
 {
@@ -26,6 +30,22 @@ class Program
         int num;
         Queue<int> copyQueue = new Queue<int>();
         Queue<int> tempQueue = new Queue<int>();
+        while(!queue.IsEmpty())
+            tempQueue.Insert(queue.Remove());
+        while(!tempQueue.IsEmpty())
+        {
+            num = tempQueue.Remove();
+            queue.Insert(num);
+            copyQueue.Insert(num);
+        }
+        return copyQueue;
+    }
+
+    public static Queue<T> CloneQueueGeneric<T>(Queue<T> queue)
+    {
+        T num;
+        Queue<T> copyQueue = new Queue<T>();
+        Queue<T> tempQueue = new Queue<T>();
         while(!queue.IsEmpty())
             tempQueue.Insert(queue.Remove());
         while(!tempQueue.IsEmpty())
@@ -127,6 +147,7 @@ class Program
             pos.GetNext();
         }
     }
+    //Shilo malichi test
     public static Queue<int> What(Queue<int>que, int n)
     {
         int x;
@@ -173,20 +194,220 @@ class Program
 
         return que3;
     }
+    public static int GetSize<T>(Queue<T> que)
+    {
+        int size = 0;
+        Queue<T> temp = CloneQueueGeneric(que);
+        while (!temp.IsEmpty())
+        {
+            temp.Remove();
+            size++;
+        }
+        
+        return size;
+    }
+
+    //Start of the revision for the test
+    public static bool T1<T>(Queue<T> que, T num)
+    {
+        Queue<T> temp = CloneQueueGeneric(que);
+        if(temp.IsEmpty() || GetSize(temp) == 1)
+            return false;
+        bool isFound = false;
+        while(!temp.IsEmpty())
+        {
+            if(temp.Remove().Equals(num))
+                isFound = true;
+        }
+        return isFound;
+    }
+    public static bool T2<T>(Queue<T> q1, Queue<T> q2)
+    {
+        Queue<T> temp1 = CloneQueueGeneric(q1);
+        Queue<T> temp2 = CloneQueueGeneric(q2);
+        if(GetSize(temp1) != GetSize(temp2))
+            return false;
+        while(!temp1.IsEmpty())
+        {
+            if(!temp1.Remove().Equals(temp2.Remove()))
+                return false;
+        }
+        return true;
+    }
+    
+    public static Queue<int> T3(Queue<int> que)
+    {
+        Queue<int> temp = CloneQueueGeneric(que);
+        Queue<int> newQue = new Queue<int>();
+
+        while (!temp.IsEmpty())
+        {
+            int num = temp.Remove();
+            bool isDuplicate = false;
+
+            Queue<int> checkQueue = CloneQueueGeneric(newQue);
+            while (!checkQueue.IsEmpty())
+            {
+                if (checkQueue.Remove() == num)
+                {
+                    isDuplicate = true;
+                    break;
+                }
+            }
+            
+            if (!isDuplicate)
+            {
+                newQue.Insert(num);
+            }
+        }
+
+        return newQue;
+    }
+    public static Time T4P1(Queue<Time> time)
+    {
+        Queue<Time> temp = CloneQueueGeneric(time);
+        Time first = temp.Head();
+        Time last = new Time(0, 0, 0);
+        int size = GetSize(temp); 
+        int counter = 0;
+
+        while (!temp.IsEmpty())
+        {
+            counter++;
+            Time current = temp.Remove();
+            if (counter == size)
+            {
+                last = current;
+            }
+            else
+            {
+                temp.Insert(current);
+            }
+        }
+
+        return first.DifferenceHour(last);
+    }
+    public static string T4P2(Queue<Time> time)
+    {
+        Queue<Time> temp = CloneQueueGeneric(time);
+        int place = 0, savedPlace = 0;
+        double minDiff = double.MaxValue;
+        while (GetSize(temp) > 1)
+        {
+            place++;
+            Time current = temp.Remove();
+            Time next = temp.Head();
+            double diff = current.DifferenceHour(next).convertToSeconds();
+            if(diff < minDiff)
+            {
+                minDiff = diff;
+                savedPlace = place;
+            }
+        }
+
+        return $"{savedPlace}, {savedPlace+1}";
+    }
+    public static int CheckHowMany<T>(Queue<T> que, T num)
+    {
+        Queue<T> temp = CloneQueueGeneric(que);
+        int counter = 0;
+        while(!temp.IsEmpty())
+        {
+            if(temp.Remove().Equals(num))
+                counter++;
+        }
+        return counter;
+    }
+    public static bool T5(Queue<int> queue, int n)
+    {
+        int num = 1;
+        Queue<int> temp = CloneQueueGeneric(queue);
+        int counter = 0;
+        while(!temp.IsEmpty())
+        {
+            Queue<int> temp2 = CloneQueueGeneric(temp);
+            if(CheckHowMany(temp2, temp.Head()) == num)
+                counter++;
+            num++;
+            temp.Remove();
+
+        }
+        if(counter == n)
+            return true;
+        return false;
+    }
+    public static void T6(Queue<Job> jobs, int sumTime)
+    {
+        Queue<Job> temp = new Queue<Job>();
+        while(jobs.IsEmpty() == false)
+        {
+            int time = jobs.Head().getTimeForWork();
+            if(time < sumTime)
+            {
+               Job job = jobs.Remove();
+               Console.WriteLine(job.getCode());
+                
+            }
+            else
+            {
+                temp.Insert(jobs.Remove());
+            }
+        }
+        jobs = temp;
+    }
+    public static void T7(Queue<int> q1, Queue<int> q2)//This is what they want but I did it with numbers
+    {
+        Queue<int> finalQueue = new Queue<int>();
+        while(!q1.IsEmpty())
+        {
+            finalQueue.Insert(q1.Remove());
+            finalQueue.Insert(q2.Remove());
+        }
+        while(q2.IsEmpty() == false)
+        {
+            finalQueue.Insert(q2.Remove());
+        }
+
+    }
+
+    public static Queue<int> T8(Queue<int> q1, Queue<int> q2)
+    {
+        Queue<int> result = new Queue<int>();
+
+        while (!q1.IsEmpty() && !q2.IsEmpty())
+        {
+            if (q1.Head() <= q2.Head())
+            {
+                result.Insert(q1.Remove());
+            }
+            else
+            {
+                result.Insert(q2.Remove());
+            }
+        }
+
+    
+        while (!q1.IsEmpty())
+        {
+            result.Insert(q1.Remove());
+        }
 
 
+        while (!q2.IsEmpty())
+        {
+            result.Insert(q2.Remove());
+        }
 
+        while (!result.IsEmpty())
+        {
+            q1.Insert(result.Remove());
+        }
+        return q1;
+    }
+    
 
     public static void Main()
     {
-        Queue<int> queue1 = createQueue();
-        ShowQueueDummy(queue1);
-        Queue<int> queue2 = createQueue();
-        
-        
-        ShowQueueDummy(queue2);
-        Console.WriteLine(" ");
-        ShowQueueDummy(MergeSortedQueues(queue1,queue2));
         
     }
 }

@@ -6,7 +6,7 @@ class Node<T>
     private T value;
     private Node<T> next;
 
-    public Node(T value)  // Add closing curly brace here
+    public Node(T value)  
     {
         this.value = value;
         this.next = null;
@@ -27,9 +27,5 @@ class Node<T>
     {
         this.next = next;
     }
-    // public int GetNum()
-    // {
-    //     Console.WriteLine("Enter any number, -999 to end: ");
-    //     return int.Parse(Console.ReadLine());
-    // }    
+    
 }
