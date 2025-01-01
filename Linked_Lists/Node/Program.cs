@@ -68,7 +68,7 @@ class Program
     }
     public static int GetMaxR(Node <int> first)
     {
-        return GetMaxR(first, first.GetValue())
+        return GetMaxR(first, first.GetValue());
         
     }
     public static int GetMaxR(Node <int> first, int max)

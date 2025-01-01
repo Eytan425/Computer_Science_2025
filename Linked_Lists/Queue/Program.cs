@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 
 class Program
 {
@@ -126,14 +127,66 @@ class Program
             pos.GetNext();
         }
     }
+    public static Queue<int> What(Queue<int>que, int n)
+    {
+        int x;
+        if(n> 0)
+        {
+            x = que.Remove();
+            if(x%2 == 1) que.Insert(x);
+            What(que, n-1);
+            if(x%2 == 0) que.Insert(x);
+        }
+        return  que;
+    }
+    public static Queue<int> MergeSortedQueues(Queue<int> que1, Queue<int> que2)
+    {
+        Queue<int> que3 = new Queue<int>();
+
+        while (!que1.IsEmpty() && !que2.IsEmpty())
+        {
+            if (que1.Head() < que2.Head())
+            {
+                que3.Insert(que1.Remove());
+            }
+            else if (que1.Head() > que2.Head())
+            {
+                que3.Insert(que2.Remove());
+            }
+            else
+            {
+                
+                que3.Insert(que1.Remove());
+                que2.Remove();
+            }
+        }
+
+        while (!que1.IsEmpty())
+        {
+            que3.Insert(que1.Remove());
+        }
+
+        while (!que2.IsEmpty())
+        {
+            que3.Insert(que2.Remove());
+        }
+
+        return que3;
+    }
+
+
+
 
     public static void Main()
     {
-        Queue<int> queue = createQueue();
-        ShowQueueDummy(queue);
+        Queue<int> queue1 = createQueue();
+        ShowQueueDummy(queue1);
+        Queue<int> queue2 = createQueue();
+        
+        
+        ShowQueueDummy(queue2);
         Console.WriteLine(" ");
-        Console.WriteLine($"The greatest number is the queue is  {GetMax(queue)}");
-        int num = 1;
-        Console.WriteLine(IsNumberInQueue(queue, num));
+        ShowQueueDummy(MergeSortedQueues(queue1,queue2));
+        
     }
 }
