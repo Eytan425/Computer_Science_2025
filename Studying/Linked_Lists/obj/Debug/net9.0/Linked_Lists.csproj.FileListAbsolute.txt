@@ -1,0 +1,15 @@
+/home/eytan/Codes/Computer_Science_2025/Studying/Linked_Lists/bin/Debug/net9.0/Linked_Lists
+/home/eytan/Codes/Computer_Science_2025/Studying/Linked_Lists/bin/Debug/net9.0/Linked_Lists.deps.json
+/home/eytan/Codes/Computer_Science_2025/Studying/Linked_Lists/bin/Debug/net9.0/Linked_Lists.runtimeconfig.json
+/home/eytan/Codes/Computer_Science_2025/Studying/Linked_Lists/bin/Debug/net9.0/Linked_Lists.dll
+/home/eytan/Codes/Computer_Science_2025/Studying/Linked_Lists/bin/Debug/net9.0/Linked_Lists.pdb
+/home/eytan/Codes/Computer_Science_2025/Studying/Linked_Lists/obj/Debug/net9.0/Linked_Lists.GeneratedMSBuildEditorConfig.editorconfig
+/home/eytan/Codes/Computer_Science_2025/Studying/Linked_Lists/obj/Debug/net9.0/Linked_Lists.AssemblyInfoInputs.cache
+/home/eytan/Codes/Computer_Science_2025/Studying/Linked_Lists/obj/Debug/net9.0/Linked_Lists.AssemblyInfo.cs
+/home/eytan/Codes/Computer_Science_2025/Studying/Linked_Lists/obj/Debug/net9.0/Linked_Lists.csproj.CoreCompileInputs.cache
+/home/eytan/Codes/Computer_Science_2025/Studying/Linked_Lists/obj/Debug/net9.0/Linked_Lists.sourcelink.json
+/home/eytan/Codes/Computer_Science_2025/Studying/Linked_Lists/obj/Debug/net9.0/Linked_Lists.dll
+/home/eytan/Codes/Computer_Science_2025/Studying/Linked_Lists/obj/Debug/net9.0/refint/Linked_Lists.dll
+/home/eytan/Codes/Computer_Science_2025/Studying/Linked_Lists/obj/Debug/net9.0/Linked_Lists.pdb
+/home/eytan/Codes/Computer_Science_2025/Studying/Linked_Lists/obj/Debug/net9.0/Linked_Lists.genruntimeconfig.cache
+/home/eytan/Codes/Computer_Science_2025/Studying/Linked_Lists/obj/Debug/net9.0/ref/Linked_Lists.dll
