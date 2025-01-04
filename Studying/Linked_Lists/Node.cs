@@ -33,7 +33,7 @@ class Node<T>
     {
         this.next = next;
     }
-    public bool hasNext()
+    public bool HasNext()
     {
         return this.next != null;
     }

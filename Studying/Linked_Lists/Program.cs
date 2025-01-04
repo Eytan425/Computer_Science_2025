@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Concurrent;
+using System.Dynamic;
 using System.Net;
 
 class Program
@@ -375,7 +376,7 @@ class Program
             n1 = n1.GetNext();
        }
        Node<char> pos = n1;
-       while(pos.hasNext())
+       while(pos.HasNext())
        {
            if(!Exists(n2, pos.GetNext().GetValue()))
            {
@@ -384,11 +385,76 @@ class Program
        }
        return n1;
     }
-    
+    public static bool IsUpOrder(Node<int> first)//Checks if the list is in ascending order - works with int or char
+    {
+        while(first.HasNext())
+        {
+            if(first.GetValue() >= first.GetNext().GetValue())
+                return false;
+            first = first.GetNext();
+        }
+        return true;
+    }
+    public static bool IsUpOrderString(Node<string> first)//Checks if the list is in ascending order - works with int or char
+    {
+        while(first.HasNext())
+        {
+            if(first.GetValue().CompareTo(first.GetNext().GetValue()) >= 0)
+                return false;
+            first = first.GetNext();
+        }
+        return true;
+    }
+    //Combine 2 lists
+    public static Node<int> Combine(Node<int> lst1, Node<int> lst2)
+    {
+        Node<int> chain = null;
+        Node<int> last = null;
+        if(lst1.GetValue() < lst2.GetValue())
+        {
+            chain = lst1;
+            lst1 = lst1.GetNext();
+        }
+        else
+        {
+            chain = lst2;
+            lst2 = lst2.GetNext();
+        }
+        last = chain;//last is the last node of the chain
+        while(lst1 != null && lst2 != null)
+        {
+            if(lst1.GetValue() < lst2.GetValue())
+            {
+                last.SetNext(lst1);
+                lst1 = lst1.GetNext();
+            }
+            else
+            {
+                last.SetNext(lst2);
+                lst2 = lst2.GetNext();
+            }
+            last = last.GetNext();
+        }
+        while(lst1 != null)
+        {
+            last.SetNext(lst1);
+            lst1 = lst1.GetNext();
+            last = last.GetNext();
+        }
+        while(lst2 != null)
+        {
+            last.SetNext(lst2);
+            lst2 = lst2.GetNext();
+            last = last.GetNext();
+        }
+        return chain;
+    }
 
     public static void Main()
     {
         Node<int> first = CreateList();
+        string test = "test";
+        test.CompareTo("test");
         // Node<int> second = CreateList();
         // Node<int> third = T34(first, second)
         Node<int> third = MultiplyDuplicates(first);
