@@ -539,13 +539,60 @@ class Program
         T41(n, difference+1, nextNum, counter + 1);
 
     }
+    public static void T42(int[] arr)
+    {
+       T42(arr, 0);
+    }
+    public static void T42(int[] arr, int index)
+    {
+        if(index > arr.Length-1)
+            return ;
+        if(index%2 == 0)
+            Console.WriteLine(arr[index]);
+        T42(arr, index+1);
+    }
+    public static void T43(int[] arr)
+    {
+        T43(arr,0);
+    }
+    public static void T43(int[] arr, int index)
+    {
+        if(index > arr.Length-2)
+            return;
+        if(arr[index] < arr[index+1])
+            Console.WriteLine(arr[index]);
+        T43(arr, index+1);
+    }
+    public static void T45(int[,] arr, int indexX)
+    {
+        T45(arr, indexX, 0,arr[0,0]);
+    }
+    
+    public static void T45(int[,] arr, int indexX, int indexY, int max)
+    {
+        if (indexX >= arr.GetLength(0))
+            return;
 
+        if (indexY >= arr.GetLength(1))
+        {
+            Console.WriteLine($"Maximum value in row {indexX}: {max}");
+            T45(arr, indexX + 1, 0, indexX + 1 < arr.GetLength(0) ? arr[indexX + 1, 0] : 0);
+            return;
+        }
+
+        if (arr[indexX, indexY] > max)
+        {
+            max = arr[indexX, indexY];
+        }
+
+        T45(arr, indexX, indexY + 1, max);
+    }
     public static void Main()
     {
         int[] arr1 = {11,9,6,5};
         int[] arr2 = {11,9,6,4};
         char[] array = {'d','a','b','a','d'};
-        int[,] arr2D = {
+        int[,] arr2D2 = {
             {1, 2, 3},
             {4, 5, 6},
             {7, 8, 9}
@@ -560,7 +607,14 @@ class Program
         int difference = 3;
         int amount = 5;
         int a1 = 2;
-       // T40(a1, difference, amount);
-        T41(6);
+        int[,] arr2D = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+        };
+
+        T45(arr2D, 0);
+        
+       
     }
 }
