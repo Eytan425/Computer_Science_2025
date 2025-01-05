@@ -489,13 +489,113 @@ class Program
             chain = chain.GetNext();
         }
     }
+    public static int T43(Node<int> first, Node<int> node)
+    {
+        return T43(node, null, 0);
+    }
+
+    public static int T43(Node<int> current, Node<int> end, int counter)
+    {
+        if (current == null || current == end)
+            return counter;
+
+        if (current.GetValue() % 2 == 0)
+            counter++;
+        current = current.GetNext();
+        return T43(current, end, counter);
+    }
+    public static void T44(Node<int> first)
+    {
+        T44(first, null, 1);
+    }
+    public static void T44(Node<int> first, Node<int> last, int counter)
+    {
+        if (first == null || first == last)
+            return ;
+        if(counter%2 == 0)
+            Console.Write($"{first.GetValue()} ");
+        T44(first.GetNext(), last, counter+1);
+    }
+    public static int T45(Node<int> first, Node<int> p, Node<int> q)
+    {
+        return T45(first,p,q,0);
+    }
+    public static int T45(Node<int> first, Node<int> p, Node<int> q, int sum)//Doesn't include q
+    {
+        if(p == null || p == q)
+            return sum;
+        sum += p.GetValue();
+        return T45(first, p.GetNext(), q, sum);
+    }
+
     
+
+    public static int T45PT1(Node<int> first, Node<int> p, Node<int> q, int sum)//Includes q
+    {
+        if (p == null)
+            return sum;
+        sum += p.GetValue();
+        if (p == q)
+            return sum;
+        return T45(first, p.GetNext(), q, sum);
+    }
+    public static int T46(Node<int> first, Node<int> second)
+    {
+        return T46(first, second, 0, 0);
+    }
+    public static int T46(Node<int> first, Node<int> second, int sizeFirst, int sizeSecond)
+    {
+        if(first == null && second == null)
+            return Math.Abs(sizeFirst - sizeSecond);
+        if(first!=null)
+            sizeFirst++;
+        if(second!=null)
+            sizeSecond++;
+        return T46(first?.GetNext(), second?.GetNext(), sizeFirst, sizeSecond);//? is to return null and not nullReference
+    }
+
+
+    // public static void Main()
+    // {
+    //     // Create linked list: 1 -> 4 -> 6 -> 7 -> 10
+    //     Node<int> first = new Node<int>(1);
+    //     Node<int> second = new Node<int>(4);
+    //     Node<int> third = new Node<int>(6);
+    //     Node<int> fourth = new Node<int>(7);
+    //     Node<int> fifth = new Node<int>(10);
+
+    //     first.SetNext(second); 
+    //     second.SetNext(third);
+    //     third.SetNext(fourth);
+    //     fourth.SetNext(fifth);
+
+    //     // // Test starting from `second` (4) to the end of the list
+    //     // int count = T43(first, second);
+
+    //     // Console.WriteLine("Count of multiples of 2 from the given node: " + count);
+    //     // // Expected output: 3 (4, 6, 10 are multiples of 2)
+    //     Node<int> nodes = CreateList();
+    //     T44(nodes);
+    // }
 
     public static void Main()
     {
-        Node<int> first = CreateList();
-        Node<int> second = CreateList();
-        T38(first, second);
+        // Create the first linked list: 1 -> 2 -> 3
+        Node<int> first = new Node<int>(1);
+        first.SetNext(new Node<int>(2));
+        first.GetNext().SetNext(new Node<int>(3));
+
+        // Create the second linked list: 4 -> 5 -> 6 -> 7
+        Node<int> second = new Node<int>(4);
+        second.SetNext(new Node<int>(5));
+        second.GetNext().SetNext(new Node<int>(6));
+        second.GetNext().GetNext().SetNext(new Node<int>(7));
+
+        // Calculate the difference in sizes between the two lists
+        int difference = T46(first, second);
+
+        // Print the result
+        Console.WriteLine($"Difference in sizes between the two lists: {difference}");
     }
 
 }
