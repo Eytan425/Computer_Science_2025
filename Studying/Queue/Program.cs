@@ -405,7 +405,7 @@ class Program
         return q1;
     }
     
-
+    
     public static void Main()
     {
         
