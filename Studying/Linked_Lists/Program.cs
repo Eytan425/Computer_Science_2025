@@ -2,6 +2,7 @@
 using System.Collections.Concurrent;
 using System.Dynamic;
 using System.Net;
+using System.Threading.Channels;
 
 class Program
 {
@@ -37,7 +38,7 @@ class Program
     public static bool IsNumInList(Node<int> first, int num)
     {
         Node<int> pos = first;
-        while(pos!=null)
+        while(pos.HasNext())
         {
             if(pos.GetNext().GetValue() == num)
             {
@@ -406,7 +407,7 @@ class Program
         return true;
     }
     //Combine 2 lists
-    public static Node<int> Combine(Node<int> lst1, Node<int> lst2)
+    public static Node<int> Combine(Node<int> lst1, Node<int> lst2)//Ascending order
     {
         Node<int> chain = null;
         Node<int> last = null;
@@ -449,16 +450,52 @@ class Program
         }
         return chain;
     }
+    public static int T37(Node<int> list1, Node<int> list2)
+    {
+        int min1 = int.MaxValue;
+        int min2 = int.MaxValue;
+        Node<int> pos1 = list1;
+        Node<int> pos2 = list2;
+        while(pos1.HasNext() && pos2.HasNext())
+        {
+            int num1 = pos1.GetValue();
+            int num2 = pos2.GetValue();
+            if(IsNumInList(list2, num1) && num1 < min1)
+            {
+                return num1;
+            } 
+            if(IsNumInList(list1, num2) && num2 < min2)
+            {
+                return num2;
+            } 
+            pos1 = pos1.GetNext();
+            pos2 = pos2.GetNext();
+        }
+        
+        return -999;    
+
+    }
+    public static void T38(Node<int> list1, Node<int> list2)
+    {
+        Node<int> pos1 = list1;
+        Node<int> pos2 = list2;
+        Node<int> chain = Combine(list1, list2);
+        int count = 0;
+        while(chain.HasNext())
+        {
+            int num = chain.GetValue();
+            if(HowMany(chain, num) >=2)
+                Console.Write($"{num} ");
+            chain = chain.GetNext();
+        }
+    }
+    
 
     public static void Main()
     {
         Node<int> first = CreateList();
-        string test = "test";
-        test.CompareTo("test");
-        // Node<int> second = CreateList();
-        // Node<int> third = T34(first, second)
-        Node<int> third = MultiplyDuplicates(first);
-        ShowList(third);
+        Node<int> second = CreateList();
+        T38(first, second);
     }
 
 }
