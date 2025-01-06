@@ -554,6 +554,63 @@ class Program
         return T46(first?.GetNext(), second?.GetNext(), sizeFirst, sizeSecond);//? is to return null and not nullReference
     }
 
+    public static Node<int> WhatA(Node<int> lst, int x) {
+        if (lst == null) {
+            return null;
+        }
+        Node<int> temp = WhatA(lst.GetNext(), x);
+        if (lst.GetValue() == x) {
+            return temp;
+        }
+        lst.SetNext(temp);
+        return lst;
+    }
+    public static Node<int> Tar2(Node<int> first)
+    {
+        if(first == null || first.GetNext() == null)
+            return first;
+        Node<int> pos = first;
+        while(pos!= null && pos.HasNext())
+        {
+            int num1 = pos.GetValue();
+            pos = pos.GetNext();
+            int num2 = pos.GetValue();
+            int sum = num1+num2;
+            Node<int> newNode = new Node<int>(sum);
+            Node<int> nextNode = pos.GetNext();
+
+
+            pos.SetNext(newNode);
+            newNode.SetNext(nextNode);
+
+            pos = nextNode;
+        }
+        return first;
+    }
+    public static int Tar1(int n)
+{
+    if (n <= 3)
+        return 1;
+    return Tar1(n, 1, 1, 1, 1, 1);
+}
+
+    public static int Tar1(int n, int a, int b, int c, int counter, int num)
+    {
+        if (counter > n)
+            return num;
+        if (counter <= 3)
+        {
+            num = 1;
+        }
+        else
+        {
+            num = a + b + c;
+            a = b;
+            b = c;
+            c = num;
+        }
+        return Tar1(n, a, b, c, counter + 1, num);
+    }
 
     // public static void Main()
     // {
@@ -580,22 +637,10 @@ class Program
 
     public static void Main()
     {
-        // Create the first linked list: 1 -> 2 -> 3
-        Node<int> first = new Node<int>(1);
-        first.SetNext(new Node<int>(2));
-        first.GetNext().SetNext(new Node<int>(3));
+        // Node<int> first = CreateList();
+        // ShowList(Tar2(first));
 
-        // Create the second linked list: 4 -> 5 -> 6 -> 7
-        Node<int> second = new Node<int>(4);
-        second.SetNext(new Node<int>(5));
-        second.GetNext().SetNext(new Node<int>(6));
-        second.GetNext().GetNext().SetNext(new Node<int>(7));
-
-        // Calculate the difference in sizes between the two lists
-        int difference = T46(first, second);
-
-        // Print the result
-        Console.WriteLine($"Difference in sizes between the two lists: {difference}");
+        Console.WriteLine(Tar1(6));
     }
 
 }
