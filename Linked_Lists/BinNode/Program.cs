@@ -44,6 +44,23 @@ class Program
 
         return t1;
     }
+    //Method that gets a tree and returns a boolean if the number is in the tree
+    public static bool IsNumInTree(BinNode<int> tree, int num)
+    {
+        if(tree == null)
+            return false;
+        if(tree.GetValue() == num || IsNumInTree(tree.GetLeft(), num)|| IsNumInTree(tree.GetRight(), num))
+            return true;
+        
+    }
+    //Returns how many circles (Junctions)
+
+    public static int CountNodes(BinNode<int> tree)
+    {
+        if(tree == null)
+            return false;
+        return 1 + CountNodes(tree.GetLeft()) + CountNodes(tree.GetRight());
+    }
     
     public static void Main()
     {
