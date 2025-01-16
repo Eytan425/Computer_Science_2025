@@ -29,6 +29,35 @@ class Program
         ShowPostOrder(tree.GetRight());
         Console.Write($"{tree.GetValue()} ");
     }
+    //רוחבית
+    public static void ShowTransverseOrder(BinNode<int> tree)
+    {
+        BinNode<int> temp;
+        Queue<BinNode<int>> queue = new Queue<BinNode<int>>();
+        queue.Insert(tree);
+        while(!queue.IsEmpty())
+        {
+            temp = queue.Remove();
+            Console.Write($"{temp.GetValue()}");
+            if(temp.HasLeft())
+            {
+                queue.Insert(temp.GetLeft());
+            }
+            if(temp.HasRight())
+            {
+                queue.Insert(temp.GetRight());
+            }
+
+        }   
+        
+    }
+    //Gets the height of the tree
+    public static int GetHeight(BinNode<int> tree)
+    {
+        if(tree == null)
+            return 0;
+        return 1 + Math.Max(GetHeight(tree.GetLeft()),GetHeight(tree.GetRight()));
+    }
     //Create a Binary Tree when knowing how many leafs in the Tree
     public static BinNode<int> CreateTree()
     {
@@ -45,26 +74,27 @@ class Program
         return t1;
     }
     //Method that gets a tree and returns a boolean if the number is in the tree
-    public static bool IsNumInTree(BinNode<int> tree, int num)
-    {
-        if(tree == null)
-            return false;
-        if(tree.GetValue() == num || IsNumInTree(tree.GetLeft(), num)|| IsNumInTree(tree.GetRight(), num))
-            return true;
+    // public static bool IsNumInTree(BinNode<int> tree, int num)
+    // {
+    //     if(tree == null)
+    //         return false;
+    //     if(tree.GetValue() == num || IsNumInTree(tree.GetLeft(), num)|| IsNumInTree(tree.GetRight(), num))
+    //         return true;
         
-    }
+    // }
     //Returns how many circles (Junctions)
 
     public static int CountNodes(BinNode<int> tree)
     {
         if(tree == null)
-            return false;
+            return 0;
         return 1 + CountNodes(tree.GetLeft()) + CountNodes(tree.GetRight());
     }
-    
+
     
     public static void Main()
     {
-        System.Console.WriteLine("Hello, World!");
+        BinNode<int> tree = CreateTree();
+        Console.WriteLine(GetHeight(tree));
     }
 }
