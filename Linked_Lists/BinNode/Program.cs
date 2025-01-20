@@ -91,7 +91,15 @@ class Program
         return 1 + CountNodes(tree.GetLeft()) + CountNodes(tree.GetRight());
     }
 
-    
+    //
+    public static int GetMaxPath(BinNode<int> tree)
+    {
+        if(tree == null)
+            return 0;
+        int sumLeft = GetMaxPath(tree.GetLeft());
+        int sumRight = GetMaxPath(tree.GetRight());
+        return tree.GetValue() + Math.Max(sumLeft, sumRight);
+    }
     public static void Main()
     {
         BinNode<int> tree = CreateTree();
