@@ -100,6 +100,44 @@ class Program
         int sumRight = GetMaxPath(tree.GetRight());
         return tree.GetValue() + Math.Max(sumLeft, sumRight);
     }
+    //Has exactly 2 grandchildred
+    public static int CountGradKids(BinNode<int> tree)
+    {
+        if(tree == null)
+            return 0;
+        int addition = 0;
+        if(CountGrandSons(tree) == 2)
+            addition++;
+        return addition + CountGradKids(tree.GetLeft()) + CountGradKids(tree.GetRight());
+    }
+    public static int CountGrandSons(BinNode<int> tree)
+    {
+        int count = 0;
+        if(tree.HasLeft())
+        {
+            if(tree.GetLeft().HasLeft())
+            {
+                count++;
+            }
+            if(tree.GetLeft().HasRight())
+            {
+                count++;
+            }
+            
+        }
+        if(tree.HasRight())
+        {
+            if(tree.GetRight().HasRight())
+            {
+                count++;
+            }
+            if(tree.GetRight().HasLeft())
+            {
+                count++;
+            }
+        }
+        return count;
+    }
     public static void Main()
     {
         BinNode<int> tree = CreateTree();
