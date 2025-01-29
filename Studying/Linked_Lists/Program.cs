@@ -611,6 +611,33 @@ class Program
         }
         return Tar1(n, a, b, c, counter + 1, num);
     }
+    public static bool IsEven(Node<int> nodes)
+    {
+        Node<int> pos = nodes;
+        int remainder = 0;
+        while(pos != null)
+        {
+            remainder = (remainder + 1) % 2;
+            pos = pos.GetNext();
+        }
+        return remainder == 0;
+    }
+    //Get the last letter of the first half and the first letter of the last half
+    public static Node<char> Question(Node<char> nodes)
+    {
+        Node<char> firstOut;
+        Node<char> pos1 = nodes;
+        Node<char> pos2 = nodes;
+        while(pos2.GetNext().GetNext() != null)
+        {
+            pos1 = pos1.GetNext();
+            pos2 = pos2.GetNext().GetNext();
+        }
+        firstOut = new Node<char>(pos1.GetValue());
+        firstOut.SetNext(new Node<char>(pos1.GetNext().GetValue()));
+        return firstOut;
+        
+    }
 
     // public static void Main()
     // {
