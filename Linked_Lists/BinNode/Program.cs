@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.Design;
 
 class Program
 {
@@ -137,6 +138,24 @@ class Program
             }
         }
         return count;
+    }
+    //Gets int binary tree and prints the nodes that are even numbers and the kids are not odd numbers
+    public static void Question(BinNode<int> tree)
+    {
+        if(tree == null)
+            return ;
+        if(Check(tree))
+            Console.Write($"{tree.GetValue()}");
+        Question(tree.GetRight());
+        Question(tree.GetLeft());
+    }
+    public static bool Check(BinNode<int> tree)
+    {
+        if(tree.GetValue() %2==0)
+            if(tree.HasLeft()&&tree.HasRight())
+                if(tree.GetLeft().GetValue()%2 == 0 && tree.GetRight().GetValue()%2==0)
+                    return true;
+        return false;
     }
     public static void Main()
     {

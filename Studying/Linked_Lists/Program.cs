@@ -638,7 +638,31 @@ class Program
         return firstOut;
         
     }
-
+    public static Node<T> GetPrev<T>(Node<T> first, Node<T> pos)
+    {
+        if(pos == first)
+            return null;
+        Node<T> pos1 = first;
+        while(pos1 != null && pos1.GetNext()!=pos)
+            pos1 = pos.GetNext();
+        return pos1;
+    }
+    public static Node<char> QuestionAnotherWay(Node<char> nodes)
+    {
+        Node<char> firstOut;
+        Node<char> pos1 = nodes;
+        Node<char> pos2 = nodes;
+        while(pos1.GetNext()!=null)
+            pos1 = pos1.GetNext();
+        while(pos2.GetNext()!=pos1)
+        {
+            pos2 = pos2.GetNext();
+            pos1 = GetPrev(nodes, pos1);
+        }
+        firstOut = new Node<char>(pos1.GetValue());
+        firstOut.SetNext(new Node<char>(pos2.GetValue()));
+        return firstOut;
+    }
     // public static void Main()
     // {
     //     // Create linked list: 1 -> 4 -> 6 -> 7 -> 10
