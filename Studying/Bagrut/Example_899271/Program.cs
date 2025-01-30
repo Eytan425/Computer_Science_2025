@@ -39,16 +39,23 @@ class Program
 
     public static void Main(string[] args)
     {
-        Queue<int> q = new Queue<int>();
-        q.Insert(1);
-        q.Insert(2);
-        q.Insert(3);
-        q.Insert(4);
-        q.Insert(5);
+        
+        OrderedList orderedList = new OrderedList();
 
-        int targetSum = 2;
-        bool result = TwoSum(q, targetSum);
-        Console.WriteLine($"Two elements sum to {targetSum}: {result}");
+        // Insert numbers into the ordered list
+        orderedList.InsertNum(5);
+        orderedList.InsertNum(3);
+        orderedList.InsertNum(8);
+        orderedList.InsertNum(1);
+        orderedList.InsertNum(5); // Duplicate to test count increment
+
+        // Print the list to verify the order and counts
+        Node<NumCount> current = orderedList.GetNode();
+        while (current != null)
+        {
+            Console.WriteLine($"Number: {current.GetValue().GetNum()}, Count: {current.GetValue().GetCount()}");
+            current = current.GetNext();
+        }
     }
 }
 class NumCount
@@ -81,48 +88,64 @@ class NumCount
 }
 class OrderedList
 {
-    private Node<NumCount> node;
+    private Node<NumCount> lst;
     public OrderedList()
     {
-        this.node = null;
+        lst = null;
     }
     public Node<NumCount> GetNode()
     {
-        return this.node;
+        return lst;
     }
-    public void SetNode(Node<NumCount> node)
+    public void SetNode(Node<NumCount> nodes)
     {
-        this.node = node;
+        lst = nodes;
     }
     public void InsertNum(int x)
     {
-        int count = 0;
-        Node<NumCount> nodes = this.node;
-        while (nodes != null)
+        Node<NumCount> pos = lst;
+        if(lst == null)
         {
-            if (nodes.GetValue().GetNum() == x)
-            {
-                nodes.GetValue().SetCount(nodes.GetValue().GetCount() + 1);
-                count++;
-            }
-            nodes = nodes.GetNext();
+            NumCount newNum = new NumCount(x,1);
+            Node<NumCount> newNode = new Node<NumCount>(newNum);
+            lst = newNode;
+            return ;
         }
-        if (count == 0)
+        //x is smaller than the first value
+        if(x < pos.GetValue().GetNum())
         {
-            Node<NumCount> newNode = new Node<NumCount>(new NumCount(x, 1));
-            if (this.node == null)
-            {
-                this.node = newNode;
-            }
-            else
-            {
-                Node<NumCount> temp = this.node;
-                while (temp.GetNext() != null)
-                {
-                    temp = temp.GetNext();
-                }
-                temp.SetNext(newNode);
-            }
+            NumCount newNum = new NumCount(x,1);
+            Node<NumCount> newNode = new Node<NumCount>(newNum);
+            newNode.SetNext(lst);
+            return ;
         }
+        //x is somewhere in there
+        while(pos.GetNext()!=null)
+        {
+            if(pos.GetValue().GetNum() == x)
+            {
+                pos.GetValue().SetCount(pos.GetValue().GetCount() + 1);
+                
+            }
+            if(pos.GetValue().GetNum() < x && pos.GetNext().GetValue().GetNum() > x)
+            {
+                NumCount newNum = new NumCount(x,1);
+                Node<NumCount> newNode = new Node<NumCount>(newNum);
+                pos.SetNext(newNode);
+                newNode.SetNext(pos.GetNext());
+                
+            }
+            pos = pos.GetNext();
+            
+        }
+        if(pos == null)
+        {
+            NumCount newNum = new NumCount(x,1);
+            Node<NumCount> newNode = new Node<NumCount>(newNum);
+            lst = newNode;
+            
+        }
+        return;
+
     }
 }
