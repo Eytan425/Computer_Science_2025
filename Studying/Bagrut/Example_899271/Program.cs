@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 
 class Program
 {
@@ -18,7 +19,7 @@ class Program
         return size;
     }
     public static  bool TwoSum(Queue<int> q, int x)
-    {
+    {   
         int size = GetSize(q);
         for(int i = 0; i < size; i++)
         {
@@ -104,6 +105,7 @@ class OrderedList
     public void InsertNum(int x)
     {
         Node<NumCount> pos = lst;
+        //If the list is null, x becomes the list
         if(lst == null)
         {
             NumCount newNum = new NumCount(x,1);
@@ -116,7 +118,7 @@ class OrderedList
         {
             NumCount newNum = new NumCount(x,1);
             Node<NumCount> newNode = new Node<NumCount>(newNum);
-            newNode.SetNext(lst);
+            newNode.SetNext(pos);
             return ;
         }
         //x is somewhere in there
@@ -138,14 +140,9 @@ class OrderedList
             pos = pos.GetNext();
             
         }
-        if(pos == null)
-        {
-            NumCount newNum = new NumCount(x,1);
-            Node<NumCount> newNode = new Node<NumCount>(newNum);
-            lst = newNode;
-            
-        }
+        
         return;
 
     }
 }
+
