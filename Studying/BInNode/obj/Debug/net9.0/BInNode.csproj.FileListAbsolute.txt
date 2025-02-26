@@ -1,0 +1,15 @@
+/home/eytan/Codes/Computer_Science_2025/Studying/BInNode/bin/Debug/net9.0/BInNode
+/home/eytan/Codes/Computer_Science_2025/Studying/BInNode/bin/Debug/net9.0/BInNode.deps.json
+/home/eytan/Codes/Computer_Science_2025/Studying/BInNode/bin/Debug/net9.0/BInNode.runtimeconfig.json
+/home/eytan/Codes/Computer_Science_2025/Studying/BInNode/bin/Debug/net9.0/BInNode.dll
+/home/eytan/Codes/Computer_Science_2025/Studying/BInNode/bin/Debug/net9.0/BInNode.pdb
+/home/eytan/Codes/Computer_Science_2025/Studying/BInNode/obj/Debug/net9.0/BInNode.GeneratedMSBuildEditorConfig.editorconfig
+/home/eytan/Codes/Computer_Science_2025/Studying/BInNode/obj/Debug/net9.0/BInNode.AssemblyInfoInputs.cache
+/home/eytan/Codes/Computer_Science_2025/Studying/BInNode/obj/Debug/net9.0/BInNode.AssemblyInfo.cs
+/home/eytan/Codes/Computer_Science_2025/Studying/BInNode/obj/Debug/net9.0/BInNode.csproj.CoreCompileInputs.cache
+/home/eytan/Codes/Computer_Science_2025/Studying/BInNode/obj/Debug/net9.0/BInNode.sourcelink.json
+/home/eytan/Codes/Computer_Science_2025/Studying/BInNode/obj/Debug/net9.0/BInNode.dll
+/home/eytan/Codes/Computer_Science_2025/Studying/BInNode/obj/Debug/net9.0/refint/BInNode.dll
+/home/eytan/Codes/Computer_Science_2025/Studying/BInNode/obj/Debug/net9.0/BInNode.pdb
+/home/eytan/Codes/Computer_Science_2025/Studying/BInNode/obj/Debug/net9.0/BInNode.genruntimeconfig.cache
+/home/eytan/Codes/Computer_Science_2025/Studying/BInNode/obj/Debug/net9.0/ref/BInNode.dll

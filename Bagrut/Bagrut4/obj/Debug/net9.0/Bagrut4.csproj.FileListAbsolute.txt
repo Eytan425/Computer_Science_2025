@@ -1,0 +1,15 @@
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Bagrut4/bin/Debug/net9.0/Bagrut4
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Bagrut4/bin/Debug/net9.0/Bagrut4.deps.json
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Bagrut4/bin/Debug/net9.0/Bagrut4.runtimeconfig.json
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Bagrut4/bin/Debug/net9.0/Bagrut4.dll
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Bagrut4/bin/Debug/net9.0/Bagrut4.pdb
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Bagrut4/obj/Debug/net9.0/Bagrut4.GeneratedMSBuildEditorConfig.editorconfig
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Bagrut4/obj/Debug/net9.0/Bagrut4.AssemblyInfoInputs.cache
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Bagrut4/obj/Debug/net9.0/Bagrut4.AssemblyInfo.cs
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Bagrut4/obj/Debug/net9.0/Bagrut4.csproj.CoreCompileInputs.cache
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Bagrut4/obj/Debug/net9.0/Bagrut4.sourcelink.json
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Bagrut4/obj/Debug/net9.0/Bagrut4.dll
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Bagrut4/obj/Debug/net9.0/refint/Bagrut4.dll
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Bagrut4/obj/Debug/net9.0/Bagrut4.pdb
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Bagrut4/obj/Debug/net9.0/Bagrut4.genruntimeconfig.cache
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Bagrut4/obj/Debug/net9.0/ref/Bagrut4.dll
