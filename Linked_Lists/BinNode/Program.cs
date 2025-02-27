@@ -4,32 +4,63 @@ using System.ComponentModel.Design;
 class Program
 {
     //Print all the values in the Binary Tree using the Pre Order Method
-    public static void ShowPreOrder(BinNode<int> tree)
+    //The tree
+    //     1
+    //    / \
+    //   2   3
+    //  / \ / \
+    // 4  5 6  7
+
+    public static void ShowPreOrder(BinNode<int> tree)//1 2 4 5 3 6 7
     {
-        if(tree == null)
-            return ;
+        // Base case: if the node is null, return
+        if (tree == null)
+            return;
+
+        // Visit the root node and print its value
         Console.Write($"{tree.GetValue()} ");
+
+        // Recursively visit the left subtree
         ShowPreOrder(tree.GetLeft());
+
+        // Recursively visit the right subtree
         ShowPreOrder(tree.GetRight());
     }
-    //Print all the values in the Binary Tree using the In Order Method
-    public static void ShowInOrder(BinNode<int> tree)
+
+    // In-order traversal: left, root, right
+    public static void ShowInOrder(BinNode<int> tree)//4 2 5 1 6 3 7
     {
-        if(tree == null)
-            return ;
+        // Base case: if the node is null, return
+        if (tree == null)
+            return;
+
+        // Recursively visit the left subtree
         ShowInOrder(tree.GetLeft());
-        Console.Write($"{tree.GetValue()}" );
-        ShowInOrder(tree.GetRight());  
+
+        // Visit the root node and print its value
+        Console.Write($"{tree.GetValue()} ");
+
+        // Recursively visit the right subtree
+        ShowInOrder(tree.GetRight());
     }
-    //Print all the values in the Binary Tree using the Post Order Method
-    public static void ShowPostOrder(BinNode<int> tree)
+
+    // Post-order traversal: left, right, root
+    public static void ShowPostOrder(BinNode<int> tree)//4 5 2 6 7 3 1
     {
-        if(tree == null)
-            return ;
+        // Base case: if the node is null, return
+        if (tree == null)
+            return;
+
+        // Recursively visit the left subtree
         ShowPostOrder(tree.GetLeft());
+
+        // Recursively visit the right subtree
         ShowPostOrder(tree.GetRight());
+
+        // Visit the root node and print its value
         Console.Write($"{tree.GetValue()} ");
     }
+
     //רוחבית
     public static void ShowTransverseOrder(BinNode<int> tree)
     {
@@ -39,7 +70,7 @@ class Program
         while(!queue.IsEmpty())
         {
             temp = queue.Remove();
-            Console.Write($"{temp.GetValue()}");
+            Console.Write($"{temp.GetValue()}"); //Add anything you want here instead of printing to the console
             if(temp.HasLeft())
             {
                 queue.Insert(temp.GetLeft());
@@ -48,10 +79,11 @@ class Program
             {
                 queue.Insert(temp.GetRight());
             }
-
+            Console.WriteLine();
         }   
         
     }
+    
     //Gets the height of the tree
     public static int GetHeight(BinNode<int> tree)
     {
@@ -92,7 +124,11 @@ class Program
         return 1 + CountNodes(tree.GetLeft()) + CountNodes(tree.GetRight());
     }
 
-    //
+    // The GetMaxPath function calculates the highest sum of values along any path from the root of a binary tree to its leaf nodes. It works by:
+
+    //     1. Checking if the current node is empty: If it is, the function returns 0.
+    //     2. Calculating sums: It finds the maximum path sum for both the left and right subtrees by calling itself recursively.
+    //     3. Returning the maximum sum: It adds the value of the current node to the greater of the two sums from its children.
     public static int GetMaxPath(BinNode<int> tree)
     {
         if(tree == null)
@@ -102,43 +138,55 @@ class Program
         return tree.GetValue() + Math.Max(sumLeft, sumRight);
     }
     //Has exactly 2 grandchildred
+    // Count the number of nodes with exactly two grandchildren in the binary tree
     public static int CountGradKids(BinNode<int> tree)
     {
-        if(tree == null)
+        if (tree == null)
             return 0;
-        int addition = 0;
-        if(CountGrandSons(tree) == 2)
-            addition++;
-        return addition + CountGradKids(tree.GetLeft()) + CountGradKids(tree.GetRight());
+
+        int count = 0;
+
+        // Check if the current node has exactly two grandchildren
+        int grandsonsCount = CountGrandSons(tree);
+        if (grandsonsCount == 2)
+            count++;
+
+        // Recursively count for left and right children
+        count += CountGradKids(tree.GetLeft());
+        count += CountGradKids(tree.GetRight());
+
+        return count;
     }
+
+    // Helper method to count the grandchildren of a specific node
     public static int CountGrandSons(BinNode<int> tree)
     {
         int count = 0;
-        if(tree.HasLeft())
+
+        // Check the left child
+        if (tree.HasLeft())
         {
-            if(tree.GetLeft().HasLeft())
-            {
-                count++;
-            }
-            if(tree.GetLeft().HasRight())
-            {
-                count++;
-            }
-            
+            // Count grandchildren from the left child
+            if (tree.GetLeft().HasLeft())
+                count++; // Count left child's left child
+            if (tree.GetLeft().HasRight())
+                count++; // Count left child's right child
         }
-        if(tree.HasRight())
+
+        // Check the right child
+        if (tree.HasRight())
         {
-            if(tree.GetRight().HasRight())
-            {
-                count++;
-            }
-            if(tree.GetRight().HasLeft())
-            {
-                count++;
-            }
+            // Count grandchildren from the right child
+            if (tree.GetRight().HasLeft())
+                count++; // Count right child's left child
+            if (tree.GetRight().HasRight())
+                count++; // Count right child's right child
         }
+
         return count;
     }
+
+
     //Gets int binary tree and prints the nodes that are even numbers and the kids are not odd numbers
     public static void Question(BinNode<int> tree)
     {
@@ -151,15 +199,38 @@ class Program
     }
     public static bool Check(BinNode<int> tree)
     {
-        if(tree.GetValue() %2==0)
-            if(tree.HasLeft()&&tree.HasRight())
-                if(tree.GetLeft().GetValue()%2 == 0 && tree.GetRight().GetValue()%2==0)
+        // Check if the current node's value is even
+        if (tree.GetValue() % 2 == 0)
+        {
+            // Check if the node has both left and right children
+            if (tree.HasLeft() && tree.HasRight())
+            {
+                // Check if both children have even values
+                if (tree.GetLeft().GetValue() % 2 == 1 && tree.GetRight().GetValue() % 2 == 1)
+                {
+                    // All conditions are met; return true
                     return true;
+                }
+            }
+        }
+        // If any condition fails, return false
         return false;
     }
+
     public static void Main()
     {
-        BinNode<int> tree = CreateTree();
-        Console.WriteLine(GetHeight(tree));
+        // Create a simple binary tree
+        BinNode<int> root = new BinNode<int>(1);
+        root.SetLeft(new BinNode<int>(2));
+        root.SetRight(new BinNode<int>(3));
+        root.GetLeft().SetLeft(new BinNode<int>(4));
+        root.GetLeft().SetRight(new BinNode<int>(5));
+        root.GetRight().SetLeft(new BinNode<int>(6));
+        root.GetRight().SetRight(new BinNode<int>(7));
+
+        // This should output the count of nodes with exactly 2 grandchildren
+        
     }
+
+
 }
