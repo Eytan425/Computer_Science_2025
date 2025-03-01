@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Summer_2018/1.0.0": {
+        "runtime": {
+          "Summer_2018.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Summer_2018/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
