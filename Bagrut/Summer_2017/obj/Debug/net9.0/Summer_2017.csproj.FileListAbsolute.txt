@@ -1,0 +1,15 @@
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2017/bin/Debug/net9.0/Summer_2017
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2017/bin/Debug/net9.0/Summer_2017.deps.json
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2017/bin/Debug/net9.0/Summer_2017.runtimeconfig.json
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2017/bin/Debug/net9.0/Summer_2017.dll
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2017/bin/Debug/net9.0/Summer_2017.pdb
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2017/obj/Debug/net9.0/Summer_2017.GeneratedMSBuildEditorConfig.editorconfig
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2017/obj/Debug/net9.0/Summer_2017.AssemblyInfoInputs.cache
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2017/obj/Debug/net9.0/Summer_2017.AssemblyInfo.cs
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2017/obj/Debug/net9.0/Summer_2017.csproj.CoreCompileInputs.cache
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2017/obj/Debug/net9.0/Summer_2017.sourcelink.json
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2017/obj/Debug/net9.0/Summer_2017.dll
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2017/obj/Debug/net9.0/refint/Summer_2017.dll
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2017/obj/Debug/net9.0/Summer_2017.pdb
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2017/obj/Debug/net9.0/Summer_2017.genruntimeconfig.cache
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2017/obj/Debug/net9.0/ref/Summer_2017.dll
