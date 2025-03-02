@@ -61,6 +61,21 @@ class Program
         Console.Write($"{tree.GetValue()} ");
     }
 
+    public static int GetLevel(BinNode<int> tree, int value, int level)
+    {
+        if (tree == null)
+            return -1;
+
+        if (tree.GetValue() == value)
+            return level;
+
+        int leftLevel = GetLevel(tree.GetLeft(), value, level + 1);
+        if (leftLevel != -1)
+            return leftLevel;
+
+        return GetLevel(tree.GetRight(), value, level + 1);
+    }
+
     //רוחבית
     public static void ShowTransverseOrder(BinNode<int> tree)
     {
@@ -216,6 +231,55 @@ class Program
         // If any condition fails, return false
         return false;
     }
+    public static int GetCount(BinNode<int> tree, int num)
+    {
+        if (tree == null)
+            return 0;
+
+        int count = 0;
+        if (tree.GetValue() == num)
+            count++;
+
+        count += GetCount(tree.GetLeft(), num);
+        count += GetCount(tree.GetRight(), num);
+
+        return count;
+    }
+    public static bool InList(Node<int> lst, int num)
+    {
+        Node<int> pos = lst;
+        while(pos!=null)
+        {
+            if(pos.GetValue() == num)
+                return true;
+            pos = pos.GetNext();
+        }
+        return false;
+    }
+
+    public static bool LessThanTree(BinNode<int> t, int x)
+    {
+        if(t == null)
+        {
+            return true;
+        }
+        if(t.GetValue()  < x)
+            return false;
+        return LessThanTree(t.GetLeft(), x) && LessThanTree(t.GetRight(), x);
+    }
+    public static bool TreeLessThanTree(BinNode<int> t1, BinNode<int> t2)
+    {
+        if(t1 == null)
+        {
+            return true;
+        }
+        if(LessThanTree(t2,t1.GetValue()) == false)
+        {
+            return false;
+        }
+
+        return TreeLessThanTree(t1.GetLeft(), t2) && TreeLessThanTree(t1.GetRight(), t2);
+    }
 
     public static void Main()
     {
@@ -229,7 +293,11 @@ class Program
         root.GetRight().SetRight(new BinNode<int>(7));
 
         // This should output the count of nodes with exactly 2 grandchildren
-        
+        BinNode<int> root2 = new BinNode<int>(8);
+        root2.SetLeft(new BinNode<int>(9));
+        root2.SetRight(new BinNode<int>(10));
+        bool isLessThan = TreeLessThanTree(root, root2);
+        Console.WriteLine($"\nTree 1 is less than Tree 2: {isLessThan}");
     }
 
 
