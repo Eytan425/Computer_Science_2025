@@ -1,0 +1,15 @@
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2023/bin/Debug/net9.0/Summer_2023
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2023/bin/Debug/net9.0/Summer_2023.deps.json
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2023/bin/Debug/net9.0/Summer_2023.runtimeconfig.json
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2023/bin/Debug/net9.0/Summer_2023.dll
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2023/bin/Debug/net9.0/Summer_2023.pdb
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2023/obj/Debug/net9.0/Summer_2023.GeneratedMSBuildEditorConfig.editorconfig
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2023/obj/Debug/net9.0/Summer_2023.AssemblyInfoInputs.cache
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2023/obj/Debug/net9.0/Summer_2023.AssemblyInfo.cs
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2023/obj/Debug/net9.0/Summer_2023.csproj.CoreCompileInputs.cache
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2023/obj/Debug/net9.0/Summer_2023.sourcelink.json
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2023/obj/Debug/net9.0/Summer_2023.dll
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2023/obj/Debug/net9.0/refint/Summer_2023.dll
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2023/obj/Debug/net9.0/Summer_2023.pdb
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2023/obj/Debug/net9.0/Summer_2023.genruntimeconfig.cache
+/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2023/obj/Debug/net9.0/ref/Summer_2023.dll
