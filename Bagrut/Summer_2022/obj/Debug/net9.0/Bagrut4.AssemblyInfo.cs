@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Bagrut4")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33c318bafc5ca6238e989d4206c042df6f4fae6d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dbe9bac127521db8dd72b46f00a6ac8696964597")]
 [assembly: System.Reflection.AssemblyProductAttribute("Bagrut4")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Bagrut4")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -88,25 +88,70 @@ class Program
     }
     //Second question is the the NumCount file
 
+    public static int DivideBy3(BinNode<int> tree)
+    {
+        return DivideBy3(tree, 0);
+    }
+    public static int DivideBy3(BinNode<int> tree, int count)
+    {
+        if (tree == null)
+            return count;
+        if (tree.GetValue() % 3 == 0)
+            count++;
+        count = DivideBy3(tree.GetLeft(), count);
+        count = DivideBy3(tree.GetRight(), count);
+        return count;
+    }
+
+    public static int DivideBy31(BinNode<int> tree)
+    {
+        return DivideBy31(tree, 0);
+    }
+    public static int DivideBy31(BinNode<int> tree, int count)
+    {
+        if (tree == null)
+            return count;
+        if (tree.GetValue() % 3 == 1)
+            count++;
+        count = DivideBy31(tree.GetLeft(), count);
+        count = DivideBy31(tree.GetRight(), count);
+        return count;
+    }
+
+    public static int DivideBy32(BinNode<int> tree)
+    {
+        return DivideBy32(tree, 0);
+    }
+    public static int DivideBy32(BinNode<int> tree, int count)
+    {
+        if (tree == null)
+            return count;
+        if (tree.GetValue() % 3 == 2)
+            count++;
+        count = DivideBy32(tree.GetLeft(), count);
+        count = DivideBy32(tree.GetRight(), count);
+        return count;
+    }
+    public static bool TreeEqual(BinNode<int> tree)
+    {
+        int count0 = DivideBy3(tree);
+        int count1 = DivideBy31(tree);
+        int count2 = DivideBy32(tree);
+        return count0 == count1 && count1 == count2 && count0 == count2;
+    }
     public static void Main(string[] args)
     {
+        // Create a binary tree where TreeEqual will return true
+        BinNode<int> root = new BinNode<int>(9);
+        root.SetLeft(new BinNode<int>(7));
+        root.SetRight(new BinNode<int>(10));
+        root.GetLeft().SetLeft(new BinNode<int>(9));
+        root.GetLeft().SetRight(new BinNode<int>(5));
         
-        OrderedList orderedList = new OrderedList();
+        root.GetRight().SetRight(new BinNode<int>(11));
 
-        // Insert numbers into the ordered list
-        orderedList.InsertNum(5);
-        orderedList.InsertNum(3);
-        orderedList.InsertNum(8);
-        orderedList.InsertNum(1);
-        orderedList.InsertNum(5); // Duplicate to test count increment
-
-        // Print the list to verify the order and counts
-        Node<NumCount> current = orderedList.GetNode();
-        while (current != null)
-        {
-            Console.WriteLine($"Number: {current.GetValue().GetNum()}, Count: {current.GetValue().GetCount()}");
-            current = current.GetNext();
-        }
-        Console.WriteLine($"Value at position 5: {orderedList.ValueN(5)}");
+        // Test the TreeEqual method
+        bool result = TreeEqual(root);
+        Console.WriteLine($"TreeEqual result: {result}");
     }
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Bagrut1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+846389d7bcd03293234cc0b2fd7d7d1d595a46b5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dbe9bac127521db8dd72b46f00a6ac8696964597")]
 [assembly: System.Reflection.AssemblyProductAttribute("Bagrut1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Bagrut1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

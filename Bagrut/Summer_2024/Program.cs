@@ -58,7 +58,7 @@ class Program
         Queue<int> q = new Queue<int>();
         q.Insert(1);
         q.Insert(2);
-        q.Insert(3);
+        q.Insert(1);
         q.Insert(4);
         q.Insert(5);
 

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/eytan/Codes/Computer_Science_2025/Bagrut/Bagrut4/Bagrut4.csproj",
+      "projectUniqueName": "/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2022/Bagrut4.csproj",
       "projectName": "Bagrut4",
-      "projectPath": "/home/eytan/Codes/Computer_Science_2025/Bagrut/Bagrut4/Bagrut4.csproj",
+      "projectPath": "/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2022/Bagrut4.csproj",
       "packagesPath": "/home/eytan/.nuget/packages/",
-      "outputPath": "/home/eytan/Codes/Computer_Science_2025/Bagrut/Bagrut4/obj/",
+      "outputPath": "/home/eytan/Codes/Computer_Science_2025/Bagrut/Summer_2022/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/eytan/.nuget/NuGet/NuGet.Config"
