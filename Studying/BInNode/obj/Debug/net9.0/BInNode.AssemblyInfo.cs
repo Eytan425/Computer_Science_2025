@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BInNode")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3584f6c5710ba05f4b542090856018f80e419d3b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+359fea33460abb1045cb63eb38c11797d0e15fb7")]
 [assembly: System.Reflection.AssemblyProductAttribute("BInNode")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BInNode")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
